@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ITW - teste prático 2 2018/19</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="P1_93015_92972.css" />
+</head>
+<body>
+    <div>
+        <div class="jumbotron">
+          <h1 class="display-4">HTML Quiz</h1>
+          <hr class="my-4"/>
+          <p>Answer at least 8 questions</p>
+        </div>
+        <form class="needs-validation" id="formulario" action="http://192.168.160.36/FormEcho.aspx" method="post" novalidate>
+          <div class="form-row">
+            <div class="form-col">
+              <label for="NMEC">Student number</label>
+              <input type="text"class="form-control" name="NMEC" id="NMEC" value="" required>
+              <div class="invalid-feedback">
+                Required field.
+              </div>
+            </div>
+            <div class="form-col">
+              <label for="name">Name</label>
+              <input type="text"name="name" class="form-control" id="name" value="" required>
+              <div class="invalid-feedback">
+                Required fiel.
+              </div>
+            </div>
+            <div class="form-col">
+              <label for="email">Email</label>
+              <input type="text" name="email" class="form-control" id="email" value="" required>
+              <div class="invalid-feedback">
+                Invalid email.
+              </div>
+            </div>
+            <div class="form-col">
+              <label for="degree">Degree</label>
+              <select name="degree" class="form-control" id="degree" class="select" required>
+                <option value="" selected>Select</option>
+                <option value="1">Engenharia Informática</option>
+                <option value="2">Matemática</option>
+                <option value="3">Other</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a option.
+              </div>
+            </div>
+          </div>
+            <div class="form-group">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="col-xs-8 large" scope="col">Statement</th>
+                            <th class="col-xs-4 large" scope="col">Agree <span class="right small disabled" style="float: right;" aria-hidden="true" aria-label="Clear answers" id="questions_X" onclick="clearAnswers()">Clear<span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="large">
+                                <span>1</span> A head section is visible to a person viewing the Web page.
+                            </td>
+                            <td>
+                                <label class="radio-inline"><input type="radio" name="question1" value="0" id="question1_0" autocomplete="off" onclick="checkStatus(this);"> 0</label>
+                                <label class="radio-inline"><input type="radio" name="question1" value="1" id="question1_1" autocomplete="off" onclick="checkStatus(this);"> 1</label>  
+                                <label class="radio-inline"><input type="radio" name="question1" value="2" id="question1_2" autocomplete="off" onclick="checkStatus(this);"> 2</label>  
+                                <label class="radio-inline"><input type="radio" name="question1" value="3" id="question1_3" autocomplete="off" onclick="checkStatus(this);"> 3</label>  
+                                <label class="radio-inline"><input type="radio" name="question1" value="4" id="question1_4" autocomplete="off" onclick="checkStatus(this);"> 4</label>  
+                                <label class="radio-inline"><input type="radio" name="question1" value="5" id="question1_5" autocomplete="off" onclick="checkStatus(this);"> 5</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="large"><span>2</span> Every Web page opens with HTML</td>
+                            <td>
+                                <label class="radio-inline"><input type="radio" name="question2" value="0" id="question2_0" autocomplete="off" onclick="checkStatus(this);"> 0</label>
+                                <label class="radio-inline"><input type="radio" name="question2" value="1" id="question2_1" autocomplete="off" onclick="checkStatus(this);"> 1</label>  
+                                <label class="radio-inline"><input type="radio" name="question2" value="2" id="question2_2" autocomplete="off" onclick="checkStatus(this);"> 2</label>  
+                                <label class="radio-inline"><input type="radio" name="question2" value="3" id="question2_3" autocomplete="off" onclick="checkStatus(this);"> 3</label>  
+                                <label class="radio-inline"><input type="radio" name="question2" value="4" id="question2_4" autocomplete="off" onclick="checkStatus(this);"> 4</label>  
+                                <label class="radio-inline"><input type="radio" name="question2" value="5" id="question2_5" autocomplete="off" onclick="checkStatus(this);"> 5</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="large"><span>3</span> Every Web page closes with ......body</td>
+                            <td>
+                                <label class="radio-inline"><input type="radio" name="question3" value="0" id="question3_0" autocomplete="off" onclick="checkStatus(this);"> 0</label>
+                                <label class="radio-inline"><input type="radio" name="question3" value="1" id="question3_1" autocomplete="off" onclick="checkStatus(this);"> 1</label>  
+                                <label class="radio-inline"><input type="radio" name="question3" value="2" id="question3_2" autocomplete="off" onclick="checkStatus(this);"> 2</label>  
+                                <label class="radio-inline"><input type="radio" name="question3" value="3" id="question3_3" autocomplete="off" onclick="checkStatus(this);"> 3</label>  
+                                <label class="radio-inline"><input type="radio" name="question3" value="4" id="question3_4" autocomplete="off" onclick="checkStatus(this);"> 4</label>  
+                                <label class="radio-inline"><input type="radio" name="question3" value="5" id="question3_5" autocomplete="off" onclick="checkStatus(this);"> 5</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="large"><span>4</span> The head section of a Web page goes to the Internet and is not visible to the person viewing the page.
+    </td>
+                            <td>
+                                <label class="radio-inline"><input type="radio" name="question4" value="0" id="question4_0" autocomplete="off" onclick="checkStatus(this);"> 0</label>
+                                <label class="radio-inline"><input type="radio" name="question4" value="1" id="question4_1" autocomplete="off" onclick="checkStatus(this);"> 1</label>  
+                                <label class="radio-inline"><input type="radio" name="question4" value="2" id="question4_2" autocomplete="off" onclick="checkStatus(this);"> 2</label>  
+                                <label class="radio-inline"><input type="radio" name="question4" value="3" id="question4_3" autocomplete="off" onclick="checkStatus(this);"> 3</label>  
+                                <label class="radio-inline"><input type="radio" name="question4" value="4" id="question4_4" autocomplete="off" onclick="checkStatus(this);"> 4</label>  
+                                <label class="radio-inline"><input type="radio" name="question4" value="5" id="question4_5" autocomplete="off" onclick="checkStatus(this);"> 5</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="large"><span>5</span> H1 is a larger size text than H2. </td>
+                            <td>
+                                <label class="radio-inline"><input type="radio" name="question5" value="0" id="question5_0" autocomplete="off" onclick="checkStatus(this);"> 0</label>
+                                <label class="radio-inline"><input type="radio" name="question5" value="1" id="question5_1" autocomplete="off" onclick="checkStatus(this);"> 1</label>  
+                                <label class="radio-inline"><input type="radio" name="question5" value="2" id="question5_2" autocomplete="off" onclick="checkStatus(this);"> 2</label>  
+                                <label class="radio-inline"><input type="radio" name="question5" value="3" id="question5_3" autocomplete="off" onclick="checkStatus(this);"> 3</label>  
+                                <label class="radio-inline"><input type="radio" name="question5" value="4" id="question5_4" autocomplete="off" onclick="checkStatus(this);"> 4</label>  
+                                <label class="radio-inline"><input type="radio" name="question5" value="5" id="question5_5" autocomplete="off" onclick="checkStatus(this);"> 5</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="large"><span>6</span> Whenever you want to make a link you should use the element (e) tag.</td>
+                            <td>
+                                <label class="radio-inline"><input type="radio" name="question6" value="0" id="question6_0" autocomplete="off" onclick="checkStatus(this);"> 0</label>
+                                <label class="radio-inline"><input type="radio" name="question6" value="1" id="question6_1" autocomplete="off" onclick="checkStatus(this);"> 1</label>  
+                                <label class="radio-inline"><input type="radio" name="question6" value="2" id="question6_2" autocomplete="off" onclick="checkStatus(this);"> 2</label>  
+                                <label class="radio-inline"><input type="radio" name="question6" value="3" id="question6_3" autocomplete="off" onclick="checkStatus(this);"> 3</label>  
+                                <label class="radio-inline"><input type="radio" name="question6" value="4" id="question6_4" autocomplete="off" onclick="checkStatus(this);"> 4</label>  
+                                <label class="radio-inline"><input type="radio" name="question6" value="5" id="question6_5" autocomplete="off" onclick="checkStatus(this);"> 5</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="large"><span>7</span> You should begin a paragraph with ....p and end the paragraph with ...../p</td>
+                            <td>
+                                <label class="radio-inline"><input type="radio" name="question7" value="0" id="question7_0" autocomplete="off" onclick="checkStatus(this);"> 0</label>
+                                <label class="radio-inline"><input type="radio" name="question7" value="1" id="question7_1" autocomplete="off" onclick="checkStatus(this);"> 1</label>  
+                                <label class="radio-inline"><input type="radio" name="question7" value="2" id="question7_2" autocomplete="off" onclick="checkStatus(this);"> 2</label>  
+                                <label class="radio-inline"><input type="radio" name="question7" value="3" id="question7_3" autocomplete="off" onclick="checkStatus(this);"> 3</label>  
+                                <label class="radio-inline"><input type="radio" name="question7" value="4" id="question7_4" autocomplete="off" onclick="checkStatus(this);"> 4</label>  
+                                <label class="radio-inline"><input type="radio" name="question7" value="5" id="question7_5" autocomplete="off" onclick="checkStatus(this);"> 5</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="large"><span>8</span> It is acceptable to add quotation marks to Web page text.</td>
+                            <td>
+                                <label class="radio-inline"><input type="radio" name="question8" value="0" id="question8_0" autocomplete="off" onclick="checkStatus(this);"> 0</label>
+                                <label class="radio-inline"><input type="radio" name="question8" value="1" id="question8_1" autocomplete="off" onclick="checkStatus(this);"> 1</label>  
+                                <label class="radio-inline"><input type="radio" name="question8" value="2" id="question8_2" autocomplete="off" onclick="checkStatus(this);"> 2</label>  
+                                <label class="radio-inline"><input type="radio" name="question8" value="3" id="question8_3" autocomplete="off" onclick="checkStatus(this);"> 3</label>  
+                                <label class="radio-inline"><input type="radio" name="question8" value="4" id="question8_4" autocomplete="off" onclick="checkStatus(this);"> 4</label>  
+                                <label class="radio-inline"><input type="radio" name="question8" value="5" id="question8_5" autocomplete="off" onclick="checkStatus(this);"> 5</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="large"><span>9</span> The first part of a URL (http) describes the resource used to retreive a Web resource.</td>
+                            <td>
+                                <label class="radio-inline"><input type="radio" name="question9" value="0" id="question9_0" autocomplete="off" onclick="checkStatus(this);"> 0</label>
+                                <label class="radio-inline"><input type="radio" name="question9" value="1" id="question9_1" autocomplete="off" onclick="checkStatus(this);"> 1</label>  
+                                <label class="radio-inline"><input type="radio" name="question9" value="2" id="question9_2" autocomplete="off" onclick="checkStatus(this);"> 2</label>  
+                                <label class="radio-inline"><input type="radio" name="question9" value="3" id="question9_3" autocomplete="off" onclick="checkStatus(this);"> 3</label>  
+                                <label class="radio-inline"><input type="radio" name="question9" value="4" id="question9_4" autocomplete="off" onclick="checkStatus(this);"> 4</label>  
+                                <label class="radio-inline"><input type="radio" name="question9" value="5" id="question9_5" autocomplete="off" onclick="checkStatus(this);"> 5</label>
+                        </tr>
+                        <tr>
+                            <td class="large"><span>10</span> An absolute path is what a server needs to locate the file being requested.</td>
+                            <td>
+                                <label class="radio-inline"><input type="radio" name="question10" value="0" id="question10_0" autocomplete="off" onclick="checkStatus(this);"> 0</label>
+                                <label class="radio-inline"><input type="radio" name="question10" value="1" id="question10_1" autocomplete="off" onclick="checkStatus(this);"> 1</label>  
+                                <label class="radio-inline"><input type="radio" name="question10" value="2" id="question10_2" autocomplete="off" onclick="checkStatus(this);"> 2</label>  
+                                <label class="radio-inline"><input type="radio" name="question10" value="3" id="question10_3" autocomplete="off" onclick="checkStatus(this);"> 3</label>  
+                                <label class="radio-inline"><input type="radio" name="question10" value="4" id="question10_4" autocomplete="off" onclick="checkStatus(this);"> 4</label>  
+                                <label class="radio-inline"><input type="radio" name="question10" value="5" id="question10_5" autocomplete="off" onclick="checkStatus(this);"> 5</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="large"><span>11</span> A home page is the same as your index page.</td>
+                            <td>
+                                <label class="radio-inline"><input type="radio" name="question11" value="0" id="question11_0" autocomplete="off" onclick="checkStatus(this);"> 0</label>
+                                <label class="radio-inline"><input type="radio" name="question11" value="1" id="question11_1" autocomplete="off" onclick="checkStatus(this);"> 1</label>  
+                                <label class="radio-inline"><input type="radio" name="question11" value="2" id="question11_2" autocomplete="off" onclick="checkStatus(this);"> 2</label>  
+                                <label class="radio-inline"><input type="radio" name="question11" value="3" id="question11_3" autocomplete="off" onclick="checkStatus(this);"> 3</label>  
+                                <label class="radio-inline"><input type="radio" name="question11" value="4" id="question11_4" autocomplete="off" onclick="checkStatus(this);"> 4</label>  
+                                <label class="radio-inline"><input type="radio" name="question11" value="5" id="question11_5" autocomplete="off" onclick="checkStatus(this);"> 5</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="large"><span>12</span> A typical URL consists of a lead, transition, and summary.</td>
+                            <td>
+                                <label class="radio-inline"><input type="radio" name="question12" value="0" id="question12_0" autocomplete="off" onclick="checkStatus(this);"> 0</label>
+                                <label class="radio-inline"><input type="radio" name="question12" value="1" id="question12_1" autocomplete="off" onclick="checkStatus(this);"> 1</label>  
+                                <label class="radio-inline"><input type="radio" name="question12" value="2" id="question12_2" autocomplete="off" onclick="checkStatus(this);"> 2</label>  
+                                <label class="radio-inline"><input type="radio" name="question12" value="3" id="question12_3" autocomplete="off" onclick="checkStatus(this);"> 3</label>  
+                                <label class="radio-inline"><input type="radio" name="question12" value="4" id="question12_4" autocomplete="off" onclick="checkStatus(this);"> 4</label>  
+                                <label class="radio-inline"><input type="radio" name="question12" value="5" id="question12_5" autocomplete="off" onclick="checkStatus(this);"> 5</label>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="form-group row">
+                <label for="answers" class="col-sm-2 col-form-label">Answered: </label>
+                <div class="col-sm-2">
+                  <input type="text" class="form-control" id="answers" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="button" class="btn btn-outline-primary" id="clearButton" value="Clear form" onclick="clearForm()">
+                <input type="submit" class="btn btn-primary" id="submitButton" value="Submit answers" active="" disabled="disabled">
+            </div>
+         </form>
+    </div>
+    <script src="P1_93015_92972.js"></script>
+</body>
+</html>

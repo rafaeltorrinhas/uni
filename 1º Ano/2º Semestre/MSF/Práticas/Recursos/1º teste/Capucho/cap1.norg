@@ -1,0 +1,38 @@
+* Regressão linear método dos mínimos quadráticos
+
+  O gráfico de uma função linear 
+
+  @math
+  y = mx + b
+  @end
+
+  @comment
+  Os espaços precisam de fix
+  @end
+  pode ser obtido a partir dos pontos experimetais $(x_i, p_i)$ através 
+  da soma dos quadrados da diferença com os pontos da reta $(x_i, y_i)$
+
+  @math
+  S(m, b) = \sum^{N}_{i=1} (y_i - p_i)^2
+  @end
+
+  A reta que melhor se ajusta pode se calculada satisfazendo as seguintes 
+  condições:
+
+  @math
+  \frac{\partial S(m,b)}{\partial m} = 0
+  @end
+
+  @math
+  \frac{\partial S(m,b)}{\partial b} = 0
+  @end
+
+  O coefficiente de relação ($r^2$) indica com bem a reta obtida ajusta-se ao 
+  gráfico, um valor de 1 indica correlação perfeita e um valor de 0 indica que 
+  o modelo não é linear.
+
+  Os erros associados são:
+
+  @math
+  \Delta m = \lvert m \rvert \sqrt{\frac{\frac{1}{r^2} - 1}{N - 2}}
+  @end

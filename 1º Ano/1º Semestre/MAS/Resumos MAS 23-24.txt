@@ -1,0 +1,367 @@
+Resumos MAS 23-24
+
+SDLC (System development life cycle):
+	- Processo de software sistemáatico.
+	- Guião para as atividades, ações e tarefas.
+
+	- 4 fases (PADI):
+		-Planeamento
+		-Análise
+		-Design
+		-Implementação
+
+	- As fases podem ser abordadas de forma diferente conforme as necessidades  do negócio.
+
+	- Cada fase é composta por uma série de passos, que produzem relatórios e ficheiros que facilitam a compreensão do projeto.
+
+
+Planeamento (Início):
+
+- Iniciação: Qual valor do negóocio? 
+	- Porquê da becessidade da construção de um SI.
+	- Como a equipa o vai construir.
+
+- Management: Criação de um plano de trabalho
+	- Feito pelo gestor do projeto.
+
+Análise (Funcionalidades do sistema): 
+
+- Quem vai utilizar o sistema? O que o sistema vai fazer? Onde e quando vai ser utilizado? : 
+
+	- Estudo do domínio/área e análise dos sistemas existentes
+	- Levantamento de requisitos (Ligação com os stakeholders)
+	- Proposta de sistema que resolve as necessidades identificadas
+	- Usa-se diagrama de sequência para representar a colaboração entre o sistema sob especificação e sistemas externos.
+
+Design (Modelação dos dados; Dentro do programa; Seleção da estrutura):
+
+- Como vai o sistema operar em termos de hardware, software, infra estruturas de rede?
+
+	- Planeamento da arquitetura e logística de todo o SI.
+	- Estratégia de desennvolvimento. (Interno ou contratualizado)
+	- Conceção da arquitetura do sistema
+	- Conceçáo do modelo de dados
+	- Desenho das entidades de software (porgramas)
+	- Selação de frameworks (padrões de projetos bem estabelecidos)
+
+Implementação (Sistema é de facto construído):
+	
+- Construção do sistema:
+	
+	- Implementação de sistemas
+	- Instalação e transições
+	- Plano de suporte
+	
+	- Desenvolver código						l
+	- Realizar testes							l-------->	Colocar em "produção"  --------->  Plano de suporte (facilita futuras modificações)
+	- Integrar módulos e frameworks			l
+	- Desenvolver as interfaces de utilizador		l
+
+
+Descreva o papel e as responsabilidades do Analista no SDLC:
+
+	- Analisa a situação do negócio
+	- Define os requisitos de software
+	- O objetivo principal é criar valor para a organização.
+
+
+ Descreva o leque de competências esperadas do Analista no desenvolvimento de projetos de sistemas de informação.
+
+	- Compreensão de negócios
+	- Análise de requisitos
+	- Modelagem de Sistemas
+	- Testes e Validação
+	- Gestão de Projetos
+	- Resolução de Problemas
+	- Atualização constante
+
+Análise: Soft Skills
+Implementação: Hard Skills
+
+
+Processo de software
+
+
+Processos sequenciais:
+	- Fases distintas e lineares
+	- Requisitos definidos no início
+	- Visibilidade e controlo do projeto em cada fase
+	- Mudanças desencorajadas
+	- Entrega no final
+
+Processos evolutivos:
+	- Iterativo e incremental
+	- Adaptação a mudanças
+	- Feedback contínuo
+	- Maior envolvimento do clliente
+	- Redução de riscos	
+	- Entregas incrementais
+
+	
+Característias distintivas dos processos sequenciais como a abordagem waterfall
+	
+	Abordagem waterfall --> Funciona bem onde os requisitos são estáveis e bem compreendidos
+		
+		Vantagens:
+			
+		- Simples e fácil de entender e usar
+		- Fácil de planear e gerenciar
+		- Prazos bem definidos, sem alterações
+		- As fases são processadas e concluídas uma de cada vez
+		
+		Desvantagens:
+
+		- Dificuldade de acomodar mudanças
+		- Modelo "pobre" para projetos longos e contínuos
+		- Funcionamento de software só é produzido tarde
+		- Não lida com requisitos incertos e em risco de mudança
+
+		Porque pode falhar?
+
+		- Projetos reais raramente seguem o fluxo sequencial que o modelo propõe
+		- É frequentemente difícil para o cliente explicar todos os requisitos
+		- O cliente tem de ter paciência. Uma versão em funcionamento do programa só estará disponível numa fase avançada do ciclo de vida do projeto
+
+
+
+		
+Identificar as práticas distintivas dos métodos ágeis (o que há de diferente no modelo de processo,
+comparando com a abordagem “tradicional”?).
+
+	Os métodos ágeis (OpenUP, SCRUM) surgiram como uma "solução" para as desvantagens da metodologia waterfall:
+
+	- Em vez de processo de design sequencial, a metodologia Agile segue uma abordagem incremental e iterativa.
+	- O desenvolvimento iterativo foca a entrega de valor orientada por ciclos curtos ---> reduz o risco
+	- Cada iteração produz algum resultado executável
+	- Os desenvolvedores começam com pequenos trabalhos orientados por sprints e no final de cada um são avaliadas as prioridades do projeto e são executados testes.
+	- Ciclos de vida curtos e entrega de valor frequente, desenvolvimento orientado por testes (TDD (Test Driven Development))
+	- O objetivo destes métodos é dar resposta à alteração de condições
+	- Entregas frequentes, integração em contínuo ---> reduz o risco
+
+
+	COMUNICAÇÃO DIRETA + TRABALHO EM EQUIPA = SUCESSO DO PROJETO
+
+
+
+
+
+
+Discuta o argumento que “A abordagem sequencial tende a mascarar os riscos reais de um projeto
+até que seja tarde demais para fazer algo significativo sobre eles.”
+
+	- A mudança é inevitável ao longo do desenvolvimento de software. Á medida que se avança num projeto segundo o método waterfall, a fixação às condições iniciais tende a esconder os erros, até que chega a uma fase onde a equipa 	reconhece erros que antes não foram resolvidos e já não os consegue corrigir.
+
+	
+
+
+
+Identifique vantagens de estruturar um projeto em iterações, produzindo incrementos com
+frequência
+
+
+	- Custo reduzido para corrigir erros
+	- Após cada iteração são realizados testes e aprovações por parte do cliente, reduzindo o risco e ajuda a decidir, se necessário, mudanças no projeto --> todas as iterações devem conter algo parcialmente executável
+	- Permite que os stakeholders estejam por dentro do projeto.
+	
+
+Caracterizar os princípios da gestão do backlog em projetos ágeis.
+	
+	Backlog --> Work Items List --> "Lista de afazeres priorizada"
+	
+	- Os itens a trabalhar estão ordenados por prioridade (topo -> prioridade mais elevada)
+	- Os itens de prioridade mais alta têm de estar bem definidos, os de mais baixa prioridade podem ainda ser vagos
+	- Cada iteração implementa os itens de mais alta prioridade
+	- Novos itens podem ser adicionados a qualquer altura a qualquer ponto da lista	l
+	- Itens podem ser eliminados a qualquer momento								l-----------> Características dos métodos ágeis
+	- Itens a trabalhar podem ter a sua prioridade alterada a qualquer momento.		l
+
+	Entidades da gestão de um projeto à moda da "Scrum"
+
+		Backlog:
+
+			- Ordenado por prioridades
+			- Features valem pontos
+		
+		Iterações:
+
+			- Tempo pré-definido
+		
+		Iteração atual:
+
+			- Atribuição e trabalho
+
+
+Unified Process / OpenUP
+
+	- Abordagem no SLDC concebida como uma matriz, cruzando diferentes disciplinas técnicas com iterações (evoluções) no projeto.
+	- Fases UP != Fases SLDC
+	
+
+
+Fases UP (CECT):
+
+
+Conceção(Começo/Origem): Há uma concordância na visão do projeto e seus objetivos? Deve o projeto avançar?
+	
+	- Apenas uma pequena iteração
+	- Entregável: documento de Visão e caso de negócio
+	- Desenvolvimento de requisitos de mais alto nível (Não requisitos detalhados)  -->  O que é preciso de um modo mais geral?
+		- Levantar casos de utilizaçao
+	- Redução do risco  -->  Identificação de requisitos chave
+	- Perceber que os requisitos vão inevitavelmente mudar
+	- Lidar com a mudança  -->  Processo iterativo
+	- Produção de protótipos conceptuais sempre que necessário.
+
+Milestone(Ponto de referência):
+
+	- Neste ponto, deve-se examinar o custo/benefício do projeto ou cancelá-lo
+
+Elaboração(Base do sistema): Há uma concordância na arquitetura a usar para desenvolver o SI? O valor produzido até então e o risco que resta é aceitável.
+	
+	- Várias iterações (Mínimo 2)
+	- Atenuar o risco através da produção de valor fornecendo uma base estável para o grande esforço do desenvolvimento da próxima fase.					l
+	- Implementação de componentes chave																										l------>  Criar uma base que sustente a construção
+	- Identificar dependências com sistemas externos e proceder à integração.																			l
+	- Implementar algum código (~10%) --> (Não design detalhado)
+	- Arquitetura conduzida por Use Cases levantados na conceção			-------> 			20% dos CAU's determinam 80% da arquitetura  (Nucleares)
+
+
+Milestone:
+	
+	- Neste ponto deve-se acordar os detalhes do sistema e a escolha da arquitetura. Só se continua se a arquitetura for validada.
+
+Construção: O sistema está perto o suficiente da entrega? A equipa já está na fase de passar a uma finalizaçãpo que assegura a entrega bem sucedida do sistema?
+	
+	- Várias iterações
+	- Construir, desenhar, implemenntar e testar em todos os cenários possíveis --> Incremento a incremento --> Guiado pela arquitetura
+	- Demonstrações frequentes do avanço do projeto. ( Divide-se em iterações para que os stakeholders acompanhem o desenvolvimento)
+
+
+Milestone:
+	
+	- Neste ponto o SI está pronto para ser entregue á equipa e transição
+ 	- Todas as funcionalidades foram desenvolvidas e todos os testes alfa foram concluidos
+	- Além do software, um manual de utilização foi desenvolvido, e há uma descrição do atual lançamento.
+	- O produto está pronto para o teste beta.
+
+Transição(Estabilização e entrega): O SI está pronto para entrega?
+
+	- Estabilização e entrega
+	- Bug-fix releases
+	- Doocumentaçáo produzida e organizada
+
+Milestone:
+	
+	- Aprovação do cliente após rever e aceitar os entregáveis do projeto.
+
+
+Principais atividades de modelação/desenvolvimento de cada fase
+
+	Conceção:
+
+		Atividades:
+		
+		- Elaborar modelo de requisitos de alto nível.
+		- Identificar interações com entidades externas.
+		- CAU levantados (Os de maior risco detalhados)
+		- Planeamento das fases subsequentes e pontos de decisão
+
+		Modelação:
+	
+		- Visão geral do problema
+		- Modelo de CAU --> Coisas chave para o projeto (Palavras-chave)
+		- Glossário inicial
+		- Avaliação de risco inicial
+		- Justificação da viabilidade do projeto
+		- Plano de projeto
+		- Protótipos iniciais (Para mitigação de risco)
+
+
+	Elaboração:
+
+		Atividades:
+			
+		- Detalhar modelo CAU
+		- Analisar o domínio
+		- Definir arquitetura candidata
+		- Validar arquitetura com implementação
+
+		Modelação:
+		
+		- Modelo CAU (Especificação abrangente)
+		- Requisitos (Incluindo não funcionais)
+		- Descrição da arquitetura de software
+		- Protótipos (mitigação de risco)
+		- Protótipo executável
+
+
+O OpenUP pode ser considerado “método ágil”?
+
+	- Método ágil --> Abordagem colaborativa e iterativa e o trabalho ´´e dividido em etapas menores e o software é entregue em incrementos frequentes
+
+	- OpenUP é considerado um "método ágil":
+	
+		- Desenvolvimento iterativo
+		- Colaboração em equipa
+		- Integrações e testes contínuos
+		- Entregas frequentes de software funcional
+		- Adaptação a mudanças, entre outros	
+
+
+Porque é que o Unified Process se assume como “orientado por casos de utilização, focado na
+arquitetura, iterativo e incremental”?
+
+	- Focado na arquitetura  --> Basear a arqitetura nos CAU nucleares.
+	- Iterativo e incremental  
+	- Orientado por CAU
+
+
+
+Distinguir UP / OpenUP da UML:
+
+	- O UP fornece uma abordagem estruturada e disciplinada para o desenvolvimento de software, a UML fornece uma linguagem visual para expressar conceitos e modelos relacionados com software.
+	- O up é utilizado em conjunto com UML. Durante as diferentes fases do UP, usa-se a UML para criar diagramas que ajudam a visualizar e entender as características de SI.
+
+
+	
+cansei me :v
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

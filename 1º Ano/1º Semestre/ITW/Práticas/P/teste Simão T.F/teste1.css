@@ -1,0 +1,10 @@
+﻿/* TODO: escrever o código em falta aqui... */
+.banner {
+    height: 420px;
+    background-image: url(banner.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+}
+body{font-family: 'Open Sans', sans-serif;}   

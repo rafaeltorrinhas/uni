@@ -1,0 +1,140 @@
+TesteHtml
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ITW - teste prático 6 2022/23</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="teste6.css" />
+</head>
+
+
+
+<body>
+    <!--- TODO: caroussel deve ser colocado aqui -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./Images/banner1.jpg" class="d-block w-100" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img src="./Images/banner2.jpg" class="d-block w-100" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img src="./Images/banner3.jpg" class="d-block w-100" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+                <img src="./Images/banner4.jpg" class="d-block w-100" alt="Fourth slide">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Fim do caroussel -->
+
+
+    <div class="container mt-4">
+        <form action="http://192.168.160.36/FormEcho.aspx">
+            <div class="row">
+                <div class="col-md-1 offset-6 text-end"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                </div>
+                <div class="col-md-1 text-end"><span class="form-control" id="quantidades"
+                        title="Quantidade total de produtos">0</span></div>
+                <div class="col-md-2 text-end"><span class="form-control" id="total"
+                        title="Preço total da compra">0.00</span></div>
+                <div class="col-md-2 text-end">
+                    <button type="submit" onclick="return valid()" class="btn btn-primary"
+                        title="Enviar pedido">Enviar</button>
+                    <button type="button" onclick="clean()" class="btn btn-secondary" title="Limpar pedido"><i
+                            class="fa fa-trash-o"></i></button>
+                </div>
+            </div>
+            <hr />
+            <h1 class="border-bottom my-3 py-3">Roupa de Mulher</h1>
+            <div class="row">
+                <div class="col-sm-4"><img src="images/fk58605c.jpg" /></div>
+                <div class="col-sm-4"><img src="images/fk58686c.jpg" /></div>
+                <div class="col-sm-4"><img src="images/fk58692c.jpg" /></div>
+                <div class="col-sm-4">
+                    <input type="hidden" id="qty1" name="qty1" value="0" />
+                    <h5>Camisolão<br /><small>fk58605</small></h5>
+                    <div class="text-danger text-end"><input id="price1" name="price1" value="24.99"
+                            class="text-danger text-end border-0" readonly> €</div>
+                    <button type="button" class="btn btn-primary w-100" onclick="this.blur(); addProduct(1)"><i
+                            class="fa fa-shopping-bag"></i> Adicionar ao meu cesto</button>
+                </div>
+                <div class="col-sm-4">
+                    <input type="hidden" id="qty2" name="qty2" value="0" />
+                    <h5>Camisolão<br /><small>fk58686</small></h5>
+                    <div class="text-danger text-end"><input id="price2" name="price2" value="21.99"
+                            class="text-danger text-end border-0" readonly> €</div>
+                    <button type="button" class="btn btn-primary w-100" onclick="this.blur(); addProduct(2)"><i
+                            class="fa fa-shopping-bag"></i> Adicionar ao meu cesto</button>
+                </div>
+                <div class="col-sm-4">
+                    <input type="hidden" id="qty3" name="qty3" value="0" />
+                    <h5>Camisa semitransparente<br /><small>fk58692</small></h5>
+                    <div class="text-danger text-end"><input id="price3" name="price3" value="19.99"
+                            class="text-danger text-end border-0" readonly> €</div>
+                    <button type="button" class="btn btn-primary w-100" onclick="this.blur(); addProduct(3)"><i
+                            class="fa fa-shopping-bag"></i> Adicionar ao meu cesto</button>
+                </div>
+            </div>
+            <p>&nbsp;</p>
+            <div class="row">
+                <div class="col-sm-4"><img src="images/fk58610c.jpg" /></div>
+                <div class="col-sm-4"><img src="images/fk58698c.jpg" /></div>
+                <div class="col-sm-4"><img src="images/fk58696c.jpg" /></div>
+                <div class="col-sm-4">
+                    <input type="hidden" id="qty4" name="qty4" value="0" />
+                    <h5>Jeggings estilo pele<br /><small>fk58680</small></h5>
+                    <div class="text-danger text-end"><input id="price4" name="price4" value="26.99"
+                            class="text-danger text-end border-0" readonly> €</div>
+                    <button type="button" class="btn btn-primary w-100" onclick="this.blur(); addProduct(4)"><i
+                            class="fa fa-shopping-bag"></i> Adicionar ao meu cesto</button>
+                </div>
+                <div class="col-sm-4">
+                    <input type="hidden" id="qty5" name="qty5" value="0" />
+                    <h5>Botas Acima Do Joelho<br /><small>fk58697</small></h5>
+                    <div class="text-danger text-end"><input id="price5" name="price5" value="36.99"
+                            class="text-danger text-end border-0" readonly> €</div>
+                    <button type="button" class="btn btn-primary w-100" onclick="this.blur(); addProduct(5)"><i
+                            class="fa fa-shopping-bag"></i> Adicionar ao meu cesto</button>
+                </div>
+                <div class="col-sm-4">
+                    <input type="hidden" id="qty6" name="qty6" value="0" />
+                    <h5>Botas Com Atacadores<br /><small>fk58695</small></h5>
+                    <div class="text-danger text-end"><input id="price6" name="price6" value="39.99"
+                            class="text-danger text-end border-0" readonly> €</div>
+                    <button type="button" class="btn btn-primary w-100" onclick="this.blur(); addProduct(6)"><i
+                            class="fa fa-shopping-bag"></i> Adicionar ao meu cesto</button>
+                </div>
+            </div>
+        </form>
+        <hr />
+        <p class="navbar-text small d-none d-md-block">Esta página possui informação retirada de <a
+                href="https://www.pontorosa.pt/mulher/" target="_blank">https://www.pontorosa.pt/mulher/</a>. Não pode
+            ser confundida com o site original e serve apenas de exemplo para este teste prático.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="teste6.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+
+  <link href="../lib/font-awesome/dist/css/font-awesome.min.css" rel="stylesheet" />
+
+  <title>Using bootstrap</title>
+
+  <style>
+    body {
+
+      font-family: 'Open Sans', sans-serif;
+      margin-bottom: 60px;
+    }
+
+    .carouselImage {
+      background-position: center center !important;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      height: 400px;
+    }
+
+    .carousel-item:nth-child(1)>div {
+      background-image: url(https://avatars.githubusercontent.com/u/14801727?s=280&v=4);
+    }
+
+    .carousel-item:nth-child(2)>div {
+      background-image: url(https://api-assets.ua.pt/v1/image/resizer?imageUrl=https%3A%2F%2Fapi-assets.ua.pt%2Ffiles%2Fimgs%2F000%2F010%2F162%2Foriginal.jpg&height=1920);
+    }
+
+    .carousel-item:nth-child(3)>div {
+      background-image: url(https://api-assets.ua.pt/files/imgs/000/000/380/original.jpg);
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contactos</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-block w-100 carouselImage"></div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-block w-100 carouselImage"></div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-block w-100 carouselImage"></div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div>
+    <fieldset style="height: auto; border: 0px;min-height: 400; padding: 90px;">
+      <h1>Dempta enim aeternitate nihilo beatior Iuppiter quam Epicurus;</h1>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum audissem Antiochum, Brute, ut solebam, cum
+          M. Quam illa ardentis amores excitaret sui! Cur tandem? Illi enim inter se dissentiunt. <a
+              href='http://loripsum.net/' target='_blank'>Multoque hoc melius nos veriusque quam Stoici.</a> Illa
+          argumenta propria videamus, cur omnia sint paria peccata. Duo Reges: constructio interrete. </p>
+
+      <p><mark>At Zeno eum non beatum modo, sed etiam divitem dicere ausus est. Cuius ad naturam apta ratio vera illa et
+          summa lex a philosophis dicitur.</mark> Nec vero intermittunt aut admirationem earum rerum, quae sunt ab
+          antiquis repertae, aut investigationem novarum. Quod, inquit, quamquam voluptatibus quibusdam est saepe
+          iucundius, tamen expetitur propter voluptatem. Sed haec omittamus; <a href='http://loripsum.net/'
+              target='_blank'>At ego quem huic anteponam non audeo dicere;</a> Quod quidem iam fit etiam in
+          Academia. </p>
+
+      <p><a href='http://loripsum.net/' target='_blank'>Omnis enim est natura diligens sui.</a> De hominibus dici
+          non necesse est. Conclusum est enim contra Cyrenaicos satis acute, nihil ad Epicurum. Quid est igitur,
+          inquit, quod requiras? </p>
+
+      <p><a href='http://loripsum.net/' target='_blank'>Non est igitur voluptas bonum.</a> Quae quo sunt
+          excelsiores, eo dant clariora indicia naturae. Qua igitur re ab deo vincitur, si aeternitate non
+          vincitur? <b>Memini me adesse P.</b> An haec ab eo non dicuntur? Tum, Quintus et Pomponius cum idem se
+          velle dixissent, Piso exorsus est. <a href='http://loripsum.net/' target='_blank'>Quodsi ipsam
+              honestatem undique pertectam atque absolutam.</a> </p>
+
+      <p>Tanti autem aderant vesicae et torminum morbi, ut nihil ad eorum magnitudinem posset accedere. Quod autem
+          magnum dolorem brevem, longinquum levem esse dicitis, id non intellego quale sit. Occultum facinus esse
+          potuerit, gaudebit; Primum in nostrane potestate est, quid meminerimus? Et non ex maxima parte de tota
+          iudicabis? Tria genera cupiditatum, naturales et necessariae, naturales et non necessariae, nec
+          naturales nec necessariae. Nulla profecto est, quin suam vim retineat a primo ad extremum. Tu vero,
+          inquam, ducas licet, si sequetur; Bork De ingenio eius in his disputationibus, non de moribus quaeritur.
+      </p>
+  </div>
+
+
+
+
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+</body>
+
+<footer>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom" style="height: 60px;">
+
+  </nav>
+</footer>
+</html>

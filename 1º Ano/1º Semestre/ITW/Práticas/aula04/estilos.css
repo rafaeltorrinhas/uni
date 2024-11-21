@@ -1,0 +1,84 @@
+body,
+input,
+select,
+textarea {
+    font-family: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+li:last-child {
+    border-right: none;
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #444;
+}
+
+li a.active:hover {
+    color: #444;
+}
+
+.active {
+    background-color: #5CAF50;
+}
+
+.banner {
+    height: 600px;
+    margin: auto;
+    background-image: url(avengers.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title {
+
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.content {
+    width: 70%;
+    float: left;
+    margin: auto;
+
+}
+
+.advertising {
+    width: 30%;
+    float: left;
+    margin: auto;
+}

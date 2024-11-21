@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript test file</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./styles.css" rel="stylesheet"></style>
+</head>
+
+<body>
+  <div class="title">Calculadora</div>
+  <div>
+    <div class="row" style="margin: 20px;">
+      <input class="form-control col-3" id="op1" type="number" value="2">
+      <select class="form-control col-3" id="operacao" onchange="getOperacao()">
+        <option value=""></option>
+        <option value="+">Soma</option>
+        <option value="-">Subtração</option>
+        <option value="x">Multiplicação</option>
+        <option value="/">Divisão</option>
+        <option value="%">Resto da Divisão</option>
+      </select>
+      <input class="form-control col-3" id="op2" type="number" value="3">
+      <input class="form-control col-3" id="res" value="">
+    </div>
+    <p></p>
+    <hr>
+    <p></p>
+    <div class="text-center">
+      <button class="btn form-control border col-2" onclick="calcula()">Calcular</button>
+    </div>
+  </div>
+  <div></div>
+  <script src="../aula06/myScript.js"></script>
+</body>
+
+</html>

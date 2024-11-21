@@ -1,0 +1,157 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ITW - Teste prático 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="teste1.css" />
+</head>
+<body>
+
+    <!--- TODO: banner deve ser colocado aqui -->
+    <div class="banner"></div>
+    <div class="container">
+        <div class="row">
+            <h1>HTML Quiz</h1>
+            <p>Answer at least 8 questions</p>
+        </div>
+        <form action="http://192.168.160.36/FormEcho.aspx" method="post" class="needs-validation" novalidate id="formulario">
+                <div class="row">
+                <div class="col-3">
+                    <input type="text" name="NMEC" id="NMEC" placeholder="Student number" pattern=".{3,}" required>
+                    <div class="invalid-feedback">Insira um número válido.</div>
+                    
+                </div>
+                <div class="col-3">
+                    <input type="text" name="name" id="name" placeholder="name" pattern=".{3,}" required>
+                    <div class="invalid-feedback">Insira um nome válido.</div>
+                </div>
+                <div class="col-3">
+                    <input type="text" name="email" id="email" placeholder="email" pattern=".{3,}" required>
+                    <div class="invalid-feedback">Insira um email válido.</div>
+                </div>
+                <div class="col-3">
+                    <select name="degree" id="degree" pattern=".{1,}" required>
+                        <option value="" selected>Select</option>
+                        <option value="1">Engenharia Informática</option>
+                        <option value="2">Matemática</option>
+                        <option value="3">Other</option>
+                    </select>
+                    <div class="invalid-feedback">Selecione um curso</div>
+                    
+                </div>
+            
+            </div>
+            <div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Question</th>
+                            <th>T</th>
+                            <th>F</th>
+                            <th><i class="fa fa-times-circle text-danger" aria-hidden="true" aria-label="Clear answer" id="questions_X" onclick="clearAnswers()"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span>1</span> A head section is visible to a person viewing the Web page.</td>
+                            <td><input type="radio" name="question1" value="T" id="question1_T" onclick="checkStatus(this)"></td>
+                            <td><input type="radio" name="question1" value="F" id="question1_F" onclick="checkStatus(this)"></td>
+                            <td><i class="fa fa-times-circle text-danger" aria-hidden="true" aria-label="Clear answer" id="question1_X" onclick="clearAnswer(1,this)"></i></td>
+                        </tr>
+                        <tr>
+                            <td><span>2</span> Every Web page opens with HTML</td>
+                            <td><input type="radio" name="question2" value="T" id="question2_T" onclick="checkStatus(this)"></td>
+                            <td><input type="radio" name="question2" value="F" id="question2_F" onclick="checkStatus(this)"></td>
+                            <td><i class="fa fa-times-circle text-danger" aria-hidden="true" aria-label="Clear answer" id="question2_X" onclick="clearAnswer(2,this)"></i></td>
+                        </tr>
+                        <tr>
+                            <td><span>3</span> Every Web page closes with ......body</td>
+                            <td><input type="radio" name="question3" value="T" id="question3_T" onclick="checkStatus(this)"></td>
+                            <td><input type="radio" name="question3" value="F" id="question3_F" onclick="checkStatus(this)"></td>
+                            <td><i class="fa fa-times-circle text-danger" aria-hidden="true" aria-label="Clear answer" id="question3_X" onclick="clearAnswer(3,this)"></i></td>
+                        </tr>
+                        <tr>
+                            <td><span>4</span> The head section of a Web page goes to the Internet and is not visible to the person viewing the page.</td>
+                            <td><input type="radio" name="question4" value="T" id="question4_T" onclick="checkStatus(this)"></td>
+                            <td><input type="radio" name="question4" value="F" id="question4_F" onclick="checkStatus(this)"></td>
+                            <td><i class="fa fa-times-circle text-danger" aria-hidden="true" aria-label="Clear answer" id="question4_X" onclick="clearAnswer(4,this)"></i></td>
+                        </tr>
+                        <tr>
+                            <td><span>5</span> H1 is a larger size text than H2.</td>
+                            <td><input type="radio" name="question5" value="T" id="question5_T" onclick="checkStatus(this)"></td>
+                            <td><input type="radio" name="question5" value="F" id="question5_F" onclick="checkStatus(this)"></td>
+                            <td><i class="fa fa-times-circle text-danger" aria-hidden="true" aria-label="Clear answer" id="question5_X" onclick="clearAnswer(5,this)"></i></td>
+                        </tr>
+                        <tr>
+                            <td><span>6</span> Whenever you want to make a link you should use the element (e) tag.</td>
+                            <td><input type="radio" name="question6" value="T" id="question6_T" onclick="checkStatus(this)"></td>
+                            <td><input type="radio" name="question6" value="F" id="question6_F" onclick="checkStatus(this)"></td>
+                            <td><i class="fa fa-times-circle text-danger" aria-hidden="true" aria-label="Clear answer" id="question6_X" onclick="clearAnswer(6,this)"></i></td>
+                        </tr>
+                        <tr>
+                            <td><span>7</span> You should begin a paragraph with ....p and end the paragraph with ...../p</td>
+                            <td><input type="radio" name="question7" value="T" id="question7_T" onclick="checkStatus(this)"></td>
+                            <td><input type="radio" name="question7" value="F" id="question7_F" onclick="checkStatus(this)"></td>
+                            <td><i class="fa fa-times-circle text-danger" aria-hidden="true" aria-label="Clear answer" id="question7_X" onclick="clearAnswer(7,this)"></i></td>
+                        </tr>
+                        <tr>
+                            <td><span>8</span> It is acceptable to add quotation marks to Web page text.</td>
+                            <td><input type="radio" name="question8" value="T" id="question8_T" onclick="checkStatus(this)"></td>
+                            <td><input type="radio" name="question8" value="F" id="question8_F" onclick="checkStatus(this)"></td>
+                            <td><i class="fa fa-times-circle text-danger" aria-hidden="true" aria-label="Clear answer" id="question8_X" onclick="clearAnswer(8,this)"></i></td>
+                        </tr>
+                        <tr>
+                            <td><span>9</span> The first part of a URL (http) describes the resource used to retreive a Web resource.</td>
+                            <td><input type="radio" name="question9" value="T" id="question9_T" onclick="checkStatus(this)"></td>
+                            <td><input type="radio" name="question9" value="F" id="question9_F" onclick="checkStatus(this)"></td>
+                            <td><i class="fa fa-times-circle text-danger" aria-hidden="true" aria-label="Clear answer" id="question9_X" onclick="clearAnswer(9,this)"></i></td>
+                        </tr>
+                        <tr>
+                            <td><span>10</span> An absolute path is what a server needs to locate the file being requested.</td>
+                            <td><input type="radio" name="question10" value="T" id="question10_T" onclick="checkStatus(this)"></td>
+                            <td><input type="radio" name="question10" value="F" id="question10_F" onclick="checkStatus(this)"></td>
+                            <td><i class="fa fa-times-circle text-danger" aria-hidden="true" aria-label="Clear answer" id="question10_X" onclick="clearAnswer(10,this)"></i></td>
+                        </tr>
+                        <tr>
+                            <td><span>11</span> A home page is the same as your index page.</td>
+                            <td><input type="radio" name="question11" value="T" id="question11_T" onclick="checkStatus(this)"></td>
+                            <td><input type="radio" name="question11" value="F" id="question11_F" onclick="checkStatus(this)"></td>
+                            <td><i class="fa fa-times-circle text-danger" aria-hidden="true" aria-label="Clear answer" id="question11_X" onclick="clearAnswer(11,this)"></i></td>
+                        </tr>
+                        <tr>
+                            <td><span>12</span> A typical URL consists of a lead, transition, and summary.</td>
+                            <td><input type="radio" name="question12" value="T" id="question12_T" onclick="checkStatus(this)"></td>
+                            <td><input type="radio" name="question12" value="F" id="question12_F" onclick="checkStatus(this)"></td>
+                            <td><i class="fa fa-times-circle text-danger" aria-hidden="true" aria-label="Clear answer" id="question12_X" onclick="clearAnswer(12,this)"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="row">
+                <div class="col-4">
+                    <input disabled type="text" id="answers" value="" placeholder="Answered:">
+                </div>
+                <div class="col-4">
+                    <input disabled type="text" id="true" value="" placeholder="True:">
+                </div>
+                <div class="col-4">
+                    <input disabled type="text" id="false" value="" placeholder="False:">
+                </div>
+            </div>
+            <div>
+                <input type="button" id="clearButton" value="Clear form" onclick="clearForm()" class="btn btn-secondary">
+                <input type="submit" id="submitButton" value="Submit answers" disabled="disabled"  class="btn btn-primary">
+            </div>
+        </form>
+    </div>
+    <script src="teste1.js"></script>
+</body>
+</html>

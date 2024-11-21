@@ -1,0 +1,29 @@
+﻿/* TODO: escrever o código em falta aqui... */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.carouselImage {
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  height: 450px;
+}
+
+.carousel-item:nth-child(1)>div {
+  background-image: url(./imagens/banner1.jpg);
+}
+
+.carousel-item:nth-child(2)>div {
+  background-image: url(./imagens/banner2.jpg);
+}
+
+.carousel-item:nth-child(3)>div {
+  background-image: url(./imagens/banner3.jpg);
+}
+
+.carousel-item:nth-child(4)>div {
+  background-image: url(./imagens/banner4.jpg);
+}

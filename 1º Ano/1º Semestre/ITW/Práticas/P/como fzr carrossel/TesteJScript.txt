@@ -1,0 +1,65 @@
+TesteJScript
+
+let displayQtdTotal = document.getElementById("quantidades");
+let displayPrecoTotal = document.getElementById("total");
+let qty_Total = 0;
+let preco_Total = 0;
+
+// esta função incrementa ao valor da div "hidden" (escondida) a quantidade de cada produto adicionada, 
+//fazendo depois uma chamada à função calcula()
+function addProduct(number) {
+    let quantidade_produtos = document.getElementById("qty" + number); // input do tipo "hidden"
+    quantidade_produtos.value++;
+    calculate();
+}
+
+// esta função calcula a quantidade de proutos e o total do seu preço e escreve-os nos inputs
+function calculate() {
+    let prec = qtdAtual = preco_Total = qty_Total = 0;
+
+    // a cada click no "Add", este for faz uma avaliação à quantidade de produtos selecionados de cada tipo (usando os values dos
+    // inputs escondidos) e ao seu preço, multiplicando estes dois e somando o valor do produto entre eles ao preço total
+    for (let i = 1; i <= 6; i++) {
+        prec = parseFloat(document.getElementById('price' + i).value);
+        qtdAtual = parseFloat(document.getElementById('qty' + i).value);
+        preco_Total += prec * qtdAtual;
+        qty_Total += qtdAtual;
+    }
+    
+    if (qty_Total >= 5) {
+        preco_Total *= 0.95;
+    }
+
+    if (preco_Total > 100) {
+        preco_Total *= 0.95;
+    }
+
+    //escrever os dados nos inputs:
+    displayQtdTotal.innerText = qty_Total;
+    displayPrecoTotal.innerText = preco_Total.toFixed(2); //toFixed() faz com que o nº de casas decimais seja 2 (quando se aplicam os descontos)
+}
+
+
+
+function valid() {
+    if (preco_Total <= 0 && qty_Total <= 0) {
+        alert("O carrinho está vazio, escolha pelo menos um produto.");
+        return false;
+    } 
+    
+    else {
+        return true;
+    }
+}
+
+
+// esta função limpa tudo o que foi adicionado (incluindo no modal)
+function clean() {
+    for (let i = 1; i <= 6; i++) {
+        qtdAtual = document.getElementById('qty' + i).value = 0; //limpa os valores das divs escondidas
+    }
+    qty_Total = 0;
+    preco_Total = 0;
+    displayQtdTotal.innerText = 0;
+    displayPrecoTotal.innerText = "0.00";
+}

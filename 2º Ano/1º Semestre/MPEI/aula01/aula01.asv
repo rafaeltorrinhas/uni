@@ -1,0 +1,24 @@
+
+% a)
+% v1 = 4:2:100 
+inicio = 4
+incr = 2
+fim = 100
+v1 = inicio:incr:fim
+
+% b)
+% v2 = 5:-1:-5
+inicio = 5
+incr = -1
+fim = -5
+v2 = inicio:incr:fim
+
+% c)
+n = 100
+inicio = 0
+incr = 1/(n-1)
+fim = 1
+v3 = inicio:incr:fim
+
+
+

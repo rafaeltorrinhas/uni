@@ -1,0 +1,59 @@
+
+Alínea 1) ----------------------------------
+
+The best [Aveiro]
+Team mates [Coimbra]
+Cool bunch [Viseu]
+
+
+Evento em 2022-06-24, total=1110.0 euros
+    KAYAK with 12 participants.
+    FULL_MENU with 0 participants.
+    DRINKS_AND_SNACKS with 0 participants.
+
+Evento em 2022-06-30, total=940.0 euros
+    LIGHT_BITES with 0 participants.
+    ARCHITECTURAL_TOUR with 10 participants.
+    RIVER_TOUR with 10 participants.
+
+Evento em 2022-06-25, total=940.0 euros
+    DRINKS_AND_SNACKS with 0 participants.
+    ART_MUSEUM with 20 participants.
+
+Evento em 2022-07-10, total=890.0 euros
+    HIKING with 15 participants.
+    WINE_TASTING with 20 participants.
+
+Alínea 2) ----------------------------------
+
+testefinal3.EventManager@14514713: CLIENTES COM EVENTOS
+Malta da Ria
+Tudo Bons Rapazes
+Malta da Ria
+Arrisca Tudo
+Régua e Esquadro
+
+testefinal3.EventManager@14514713: LISTA DE PRÓXIMOS EVENTOS ORDENADOS POR DATA
+
+Evento em 2022-07-01, total=752.0 euros
+    ART_MUSEUM with 16 participants.
+    LIGHT_BITES with 0 participants.
+
+Evento em 2022-07-01, total=880.0 euros
+    HIKING with 16 participants.
+    DRINKS_AND_SNACKS with 0 participants.
+
+Evento em 2022-07-11, total=986.0 euros
+    RIVER_TOUR with 23 participants.
+    BOWLING with 16 participants.
+
+Evento em 2022-07-13, total=880.0 euros
+    HIKING with 16 participants.
+    DRINKS_AND_SNACKS with 0 participants.
+
+Evento em 2022-07-22, total=2695.0 euros
+    HIKING with 28 participants.
+    BIKE with 21 participants.
+    DRINKS_AND_SNACKS with 0 participants.
+    FULL_MENU with 0 participants.
+

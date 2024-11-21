@@ -1,0 +1,201 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ITW - teste prático 9 2022/23</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="teste9.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="banner"></div>
+    <div class="container">
+        <h2 class="">Cálculo da média</h2>
+        <hr />
+        <form action="http://192.168.160.36/FormEcho.aspx"  method="POST">
+            <div class="">
+                <div class="form row">
+                    <div class="col-2"><label for="fld_1" class="">Nome</label></div>
+                    <div class="col-9"><input class="form-control is-valid" type="text" id="fld_1" name="fld_1" /></div>
+                </div>
+                <div class="">
+                    <div class="invalid-feedback" id="fld_1_Error"><i class=""></i> Erro: Tamanho mínimo do nome: 2
+                        palavras</div>
+                </div>
+            </div>
+            <div class="">
+                <div class="form row">
+                    <div class="col-2"><label for="fld_2" class="">Data de nascimento</label></div>
+                    <div class="col-2"><input class="form-control is-valid" type="date" id="fld_2" name="field_2" />
+                    </div>
+                </div>
+                <div class="">
+                    <div class="invalid-feedback" id="fld_2_Error1"><i class="fa-solid fa-triangle-exclamation"></i> Erro: Tem de inserir uma data.</div>
+                    <div class="invalid-feedback" id="fld_2_Error2"><i class="a-solid fa-triangle-exclamation"></i> Erro: O utilizador tem de ter mais de 18 anos.
+                    </div>
+                </div>
+            </div>
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                        aria-controls="home" aria-selected="true">Informação das Notas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#report" role="tab"
+                        aria-controls="profile" aria-selected="false">Relatório das Médias</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-2"><label for="field_3" class="">Notas nas disciplinas</label></div>
+                            <div class="col-5">
+                                <div class="form row">
+                                    <div class="col-9"><label for="field_30" class="">Álgebra Linear e Geometria
+                                            Analítica</label><br></div>
+                                    <div class="col-3"><input class="form-control" type="text" id="field_30"
+                                            name="field_30" /><br></div>
+                                    <div class="d-none invalid-feedback" id="field_30_Error"><i class="a-solid fa-triangle-exclamation"></i> Erro: Tem de inserir uma
+                                        nota entre 0 e 20.</div>
+                                </div>
+                                <div class="form row">
+                                    <div class="col-9"><label for="field_31" class="">Elementos de Física</label><br>
+                                    </div>
+                                    <div class="col-3"><input class="form-control" type="text" id="field_31"
+                                            name="field_31" /><br></div>
+                                    <div class="d-none invalid-feedback" id="field_31_Error"><i class="a-solid fa-triangle-exclamation"></i> Erro: Tem de inserir uma
+                                        nota entre 0 e 20.</div>
+                                </div>
+                                <div class="form row">
+                                    <div class="col-9"><label for="field_32" class="">Cálculo I</label><br></div>
+                                    <div class="col-3"><input class="form-control" type="text" id="field_32"
+                                            name="field_32" /><br></div>
+                                    <div class="d-none invalid-feedback" id="field_32_Error"><i class="a-solid fa-triangle-exclamation"></i> Erro: Tem de inserir uma
+                                        nota entre 0 e 20.</div>
+                                </div>
+                                <div class="form row">
+                                    <div class="col-9"><label for="field_33" class="">Introdução às Tecnologias
+                                            Web</label><br></div>
+                                    <div class="col-3"><input class="form-control" type="text" id="field_33"
+                                            name="field_33" /><br></div>
+                                    <div class="d-none invalid-feedback" id="field_33_Error"><i class="a-solid fa-triangle-exclamation"></i> Erro: Tem de inserir uma
+                                        nota entre 0 e 20.</div>
+                                </div>
+                                <div class="form row">
+                                    <div class="col-9"><label for="field_34" class="">Fundamentos de
+                                            Programação</label><br></div>
+                                    <div class="col-3"><input class="form-control" type="text" id="field_34"
+                                            name="field_34" /><br></div>
+                                    <div class="d-none invalid-feedback" id="field_34_Error"><i class="a-solid fa-triangle-exclamation"></i> Erro: Tem de inserir uma
+                                        nota entre 0 e 20.</div>
+                                </div>
+                            </div>
+                            <div class="form col-5">
+                                <div class="form row">
+                                    <div class="col-9"><label for="field_35" class="">Modelação e Análise de
+                                            Sistemas</label><br></div>
+                                    <div class="col-3"><input class="form-control" type="text" id="field_35"
+                                            name="field_35" /><br></div>
+                                    <div class="d-none invalid-feedback" id="field_35_Error"><i class="a-solid fa-triangle-exclamation"></i> Erro: Tem de inserir uma
+                                        nota entre 0 e 20.</div>
+                                </div>
+                                <div class="form row">
+                                    <div class="col-9"><label for="field_36" class="">Cálculo II</label><br></div>
+                                    <div class="col-3"><input class="form-control" type="text" id="field_36"
+                                            name="field_36" /><br></div>
+                                    <div class="d-none invalid-feedback" id="field_36_Error"><i class="a-solid fa-triangle-exclamation"></i> Erro: Tem de inserir uma
+                                        nota entre 0 e 20.</div>
+                                </div>
+                                <div class="form row">
+                                    <div class="col-9"><label for="field_37" class="">Matemática Discreta</label><br>
+                                    </div>
+                                    <div class="col-3"><input class="form-control" type="text" id="field_37"
+                                            name="field_37" /><br></div>
+                                    <div class="d-none invalid-feedback" id="field_37_Error"><i class="a-solid fa-triangle-exclamation"></i> Erro: Tem de inserir uma
+                                        nota entre 0 e 20.</div>
+                                </div>
+                                <div class="form row">
+                                    <div class="col-9"><label for="field_38" class="">Introdução à Arquitetura de
+                                            Computadores</label><br></div>
+                                    <div class="col-3"><input class="form-control" type="text" id="field_38"
+                                            name="field_38" /><br></div>
+                                    <div class="d-none invalid-feedback" id="field_38_Error"><i class="a-solid fa-triangle-exclamation"></i> Erro: Tem de inserir uma
+                                        nota entre 0 e 20.</div>
+                                </div>
+                                <div class="form row">
+                                    <div class="col-9"><label for="field_39" class="">Programação Orientada a
+                                            Objetos</label><br></div>
+                                    <div class="col-3"><input class="form-control" type="text" id="field_39"
+                                            name="field_39" /><br></div>
+                                    <div class="d-none invalid-feedback" id="field_39_Error"><i class="a-solid fa-triangle-exclamation"></i> Erro: Tem de inserir uma
+                                        nota entre 0 e 20.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="d-none invalid-feedback" id="fld_1_Error"><i class="a-solid fa-triangle-exclamation"></i> Erro: Tem de lançar as notas em todas as
+                            disciplinas</div>
+                    </div>
+                </div>
+                <div class="tab-pane fade container" id="report" role="tabpanel" aria-labelledby="report-tab">
+                    <div class="">
+                        <div class="form row">
+                            <div class="col-3">Média do 1º Semestre</div>
+                            <div class="col-1"><input class="form-control" type="text" id="avg_1" name="avg_1"
+                                    readonly /></div>
+                            <div class="col-3"><span class="">&nbsp; valores.</span></div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="form row">
+                            <div class="col-3">Média do 2º Semestre</div>
+                            <div class="col-1"><input class="form-control" type="text" id="avg_2" name="avg_2"
+                                    readonly /></div>
+                            <div class="col-3"><span class="">&nbsp; valores.</span></div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="form row">
+                            <div class="col-3">Média Total</div>
+                            <div class="col-1"><input class="form-control" type="text" id="avg_t" name="avg_t"
+                                    readonly /></div>
+                            <div class="col-3"><span class="">&nbsp; valores.</span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="">
+                <div class="col-2 offset-5 btn-group">
+                    <input type="button" value="Calcular" class="btn btn-outline-primary" onclick="return calcular()" />
+                    <input type="submit" value="Enviar" class="btn btn-outline-success" onclick="return enviar()" />
+                    <input type="reset" value="Limpar" class="btn btn-outline-danger" onclick="limpar()" />
+                </div>
+            </div>
+        </form>
+    </div>
+    <p></p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="teste9.js"></script>
+</body>
+
+</html>

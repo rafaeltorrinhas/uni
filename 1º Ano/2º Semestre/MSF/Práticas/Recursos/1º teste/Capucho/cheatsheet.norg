@@ -1,0 +1,486 @@
+@document.meta
+title: Cheat Sheet
+author: João Capucho
+@end
+
+Este documento contêm várias fórmulas e bocados de informação utéis.
+
+* Incertezas
+
+  Todas as medições do mundo real contêm uma incerteza associada esta é denotada depois
+  do valor medido como $\pm c$ onde $c$ têm a mesma unidade que o valor. Para medições
+  diretas o valor da incerteza é normalmente obtido de duas maneiras:
+
+  - Medições com instrumentos analógicas: A incerteza é igual a metade da menor divisão
+	da escala.
+  - Medições com instrumentos digitais: A incerteza é igual a menor divisão da escala.
+
+  Para medições indiretas (calculadas a partir de outras medições) a incerteza é calculada
+  dependendo da operação aplicada, o gráfico seguinte a incerteza para algumas operações.
+
+  @embed image
+  assets/Incerteza.png
+  @end
+
+  $F$ é uma função qualquer e $\frac{\partial F}{\partial a}$ é a derivada parcial de $F$
+  para $a$.
+
+* Derivadas parciais
+
+  A derivada parcial é uma derivada que se aplica a uma função que têm mais de um argumento,
+  a derivada parcial utiliza o símbolo $\partial$ em vez de $d$ e é calculada em relação a
+  uma variavél em específico, todas as outras variavéis assumem-se como constantes.
+
+  Dada a seguinte função com três argumentos
+
+  @math
+  F(a, b, c) = ba + c
+  @end
+
+  A sua derivada parcial para $a$ é a seguinte
+
+  @math
+  \frac{\partial F}{\partial a} = b
+  @end
+
+  Aqui $c$ foi eleminado pois considera-se uma constante, $b$ também é uma constante neste
+  caso mas como está a multiplicar por $a$ logo mantêm-se, $a$ calcula-se normalmente.
+
+* Movimento
+
+  O movimento é descrito por três quantidades, a posição, a velocidade a aceleração, estas
+  quantidades relacionam-se das seguintes maneiras, onde $t$ é o tempo.
+
+  @embed image
+  assets/movimento-relacoes.png
+  @end
+
+** Movimento uniforme
+
+   Caso a aceleração seja constante durante o intervalo de tempo em estudo, pode-se calcular
+   a posição instantânea utilizando a seguinte fórmula:
+
+   @math
+   x(t) = x_0 + v_0t + \frac{1}{2}at^2
+   @end
+
+   Onde $x_0$ e $v_0$ são a posição e a velocidade do corpo no instante inicial respetivamente,
+   e $a$ é a aceleração.
+
+   A velocidade pode ser obtida diretamente através da seguinte fórmula:
+
+   @math
+   v(t) = v_0 + at
+   @end
+
+** Queda livre sem resistência do ar
+
+   A queda livre sem resistência do ar, é um caso especial do movimento uniforme onde a
+   aceleração corresponde a aceleração gravitíca do planeta em questão ($g = 9.8$ na terra).
+
+   @math
+   \begin{align*}
+   a(t) &= g \\
+   v(t) &= v_0t + gt \\
+   x(t) &= x_0 + v_0t + \frac{1}{2}gt^2
+   \end{align*}
+   @end
+
+   CUIDADO: $g = 9.8$ assume que a posição aumenta em direção ao planeta (ou seja o eixo da
+   posição está invertido face ao normalmente utilizado).
+
+** Queda livre com resistência do ar
+
+   A queda livre com resistência do ar não é um movimento uniforme pois a aceleração varia
+   com a velocidade do corpo, pois esta causa atrito com o ar. A aceleração é dada pela
+   seguinte fórmula:
+
+   @math
+   a(t) = g - \frac{g}{v_T^2} v \lvert v \rvert
+   @end
+
+   Onde $v_T$ é a velocidade terminal do corpo e $v$ é a velocidade instantânea do corpo
+   em $t$. A posição instantânea é dada pela seguinte expressão:
+
+   @math
+   y(t) = \frac{v_T^2}{g} \ln \left[ \cosh \left( \frac{gt}{v_T} \right) \right]
+   @end
+
+   CUIDADO: Ambas estas expressões assumem que $g$ é positivo e que a posição aumenta
+   em direção ao planeta (ou seja o eixo da posição está invertido face ao normalmente
+   utilizado), para utilizar um eixo de posição que aumenta a medida que o corpo se
+   afasta da superfície do planeta, basta negarmos o $g$ na aceleração ($g$ continua
+   positivo).
+
+   @math
+   a(t) = -g - \frac{g}{v_T^2} v \lvert v \rvert
+   @end
+
+* Integração de Euler
+
+  @math
+  \begin{align*}
+  &v_x(t + \delta t) \approx v(t) + a_x(t) \times \delta t \\
+  &x(t + \delta t) \approx x(t) + v_x(t) \times \delta t
+  \end{align*}
+  @end
+
+  @code python
+  # Parâmetros
+  dt = 0.01 # δt - tamanho do passo
+  t0 = 0 # Tempo inicial
+  tf = 4.0 # Tempo final
+  y0 = 0 # Posição inicial
+  vy0 = 0 # Velocidade inicial
+  g = 9.8 # Aceleração gravítica
+
+  # Número de passos/iterações
+  #
+  # + 0.1 para garantir que não há arrendodamentos
+  # para baixo
+  n = int((tf-t0) / dt + 0.1)
+
+  t = np.zeros(n + 1) # Tempo
+  y = np.zeros(n + 1) # Posição
+  vy = np.zeros(n + 1) # Velocidade
+  ay = np.zeros(n + 1) # Aceleração
+
+  # Valores inicias
+  vy[0] = vy0
+  t[0] = t0
+  y[0] = y0
+
+  for i in range(n):
+	  ay[i] = g 
+
+	  vy[i + 1] = vy[i] + ay[i] * dt
+	  y[i + 1] = y[i] + vy[i] * dt 
+	  t[i + 1] = t[i] + dt
+  @end
+
+** Integração de Euler-Cromer
+
+   Melhor para movimentos periódicos como órbitas e molas (conserva a energia).
+
+   @math
+   \begin{align*}
+   &v_x(t + \delta t) \approx v(t) + a_x(t) \times \delta t \\
+   &\boldsymbol{ x(t + \delta t) \approx x(t) + v_x(t + \delta t) \times \delta t }
+   \end{align*}
+   @end
+
+   @code python
+   # Parâmetros
+   dt = 0.01 # δt - tamanho do passo
+   t0 = 0 # Tempo inicial
+   tf = 4.0 # Tempo final
+   y0 = 0 # Posição inicial
+   vy0 = 0 # Velocidade inicial
+   g = 9.8 # Aceleração gravítica
+
+   # Número de passos/iterações
+   #
+   # + 0.1 para garantir que não há arrendodamentos
+   # para baixo
+   n = int((tf-t0) / dt + 0.1)
+
+   t = np.zeros(n + 1) # Tempo
+   y = np.zeros(n + 1) # Posição
+   vy = np.zeros(n + 1) # Velocidade
+   ay = np.zeros(n + 1) # Aceleração
+
+   # Valores inicias
+   vy[0] = vy0
+   t[0] = t0
+   y[0] = y0
+
+   for i in range(n):
+	   ay[i] = g 
+
+	   vy[i + 1] = vy[i] + ay[i] * dt
+	   y[i + 1] = y[i] + vy[i + 1] * dt 
+	   t[i + 1] = t[i] + dt
+   @end
+
+** Integração de Euler multidimensional
+
+   @code python
+   # Parâmetros
+   dt = 0.001 # δt - tamanho do passo
+   t0 = 0 # Tempo inicial
+   tf = 1 # Tempo final
+   x0 = np.array([0, 0, 23.8]) # Posição inicial
+   v0 = np.array([25, 5, -50]) # Velocidade inicial
+
+   # Número de passos/iterações
+   #
+   # + 0.1 para garantir que não há arrendondamentos
+   # para baixo
+   n = int((tf-t0) / dt + 0.1)
+   # Arrays de arrays tridimensionais
+   shape = (n + 1, 3)
+
+   t = np.zeros(n + 1) # Tempo
+   x = np.zeros(shape) # Posição
+   v = np.zeros(shape) # Velocidade
+   a = np.zeros(shape) # Aceleração
+
+   # Valores iniciais
+   a[0] = np.array([0, -9.8, 0])
+   v[0] = v0
+   t[0] = t0
+   x[0] = x0
+
+   for i in range(n):
+	   a[i + 1] = np.array([0, -9.8, 0])
+
+	   v[i + 1] = v[i] + a[i] * dt
+	   x[i + 1] = x[i] + v[i] * dt
+	   t[i + 1] = t[i] + dt
+   @end
+
+** Obter um valor num dado instante
+
+   @code python
+   target = 3
+   targetIdx = int(np.ceil(target / dt))
+
+   v = vy[targetIdx]
+   @end
+
+** Obter um máximo e o instante onde ocorreu
+
+   @code python
+   idx = y.argmax()
+   yMax = y[idx]
+   tMax = t[idx]
+   @end
+
+** Obter o primeiro zero e o instante onde ocorreu
+
+   @code python
+   for i in range(n):
+     if y[i] == 0 or y[i] * y[i + 1] < 0:
+       idx = i
+       break
+
+   yZero = y[idx]
+   tZero = t[idx]
+   @end
+
+** Erros
+
+   - Erro de truncatura local: proporcional a $\delta t^2$
+   - Erro de truncatura global: proporcional a
+	 $N\delta t^2 = \left( t_f - t_0 \right) \delta t$, onde $N$ é o número de passos.
+
+* Forças
+** Resistência do ar
+
+   (Sabendo a velocidade terminal):
+
+   @math
+   D = \frac{g}{v_T^2}
+   @end
+
+   @math
+   \vec{F} = - m D \left\lvert \vec{v} \right\rvert^2 \hat{v}
+   @end
+
+   @code python
+   def forcaResAr(D, v, m):
+	   v_norm = np.linalg.norm(v)
+	   v_hat = v / v_norm
+	   return -m * D * v_norm**2 * v_hat
+   @end
+
+   (Sabendo o coeficiente de resistência do ar):
+
+   @math
+   \vec{F} = - \frac{C_\text{res}}{2} \, A \, \rho_\text{ar} \,  \left\lvert \vec{v} \right\rvert \vec{v}
+   @end
+
+   @code python
+   def forcaResAr(C_res, A, v):
+      rho_ar = 1.225
+	   v_norm = np.linalg.norm(v)
+      return -C_res/2 * A * rho_ar * v_norm * v
+   @end
+
+** Força da gravidade de Newton
+
+   @math
+   \vec{F}_\text{grav} = G \frac{m M}{\left\lvert \vec{r} \right\rvert^2} \hat{r}
+   @end
+
+   @code python
+   def forcaGrav(m, M, r):
+	   G = 6.67259 * 10**(-11)
+	   r_norm = np.linalg.norm(r)
+	   r_hat = r / r_norm
+	   return G * m * M / r_norm**2 * r_hat
+   @end
+
+** Peso
+
+   @math
+   \left\lvert \vec{P} \right\rvert = m \left\lvert \vec{g} \right\rvert
+   @end
+
+   @code python
+   def forcaPeso(m, g):
+	   return m * g
+   @end
+
+** Força elétrica (eletrostática)
+
+   @math
+   \vec{F}_\text{elét} = K \frac{q \, Q}{\left\lvert \vec{r} \right\rvert^2} \hat{r}
+   @end
+
+   @code python
+   def forcaElet(q, Q, r):
+	   K = 8.987551 * 10**9
+	   r_norm = np.linalg.norm(r)
+	   r_hat = r / r_norm
+	   return K * q * Q / r_norm**2 * r_hat
+   @end
+
+   Força elétrica de uma carga num campo elétrico:
+
+   @math
+   \vec{F}_\text{elét} = q \, \vec{E}_\text{elét}
+   @end
+
+** Força magnética
+
+   @math
+   \vec{F}_\text{mag} = q \, \vec{v} \times \vec{B}_\text{mag}
+   @end
+
+   @code python
+   def forcaMag(q, v, B):
+	   return q * np.cross(v, B)
+   @end
+
+** Força de Magnus (para um corpo esférico)
+
+   @math
+   \vec{F}_\text{Magnus} = \frac{1}{2} A \, \rho \, r \, \vec{\omega} \times \vec{v}
+   @end
+
+   @code python
+   def forcaMagnus(A, p, r, w, v):
+	   return 1/2 * A * p * r * np.cross(w, v)
+   @end
+
+** Força do atrito
+
+   @math
+   \vec{F} = - \mu \, \left\lvert \vec{N} \right\rvert \hat{v}
+   @end
+
+   @code python
+   def forcaAtrito(v, mu, N):
+     v_hat = v / np.linalg.norm(v)
+     return -mu * np.linalg.norm(N) * v_hat
+   @end
+
+* Trabalho
+
+  Trabalho como variação da energia cinética:
+
+  @math
+  W_{0,1} = \int_{x_0}^{x_1} \; \vec{F} \; d\vec{r} =
+  \frac{1}{2} m \left\lvert \vec{v_1} \right\rvert^2
+  - \frac{1}{2} m \left\lvert \vec{v_0} \right\rvert^2
+  @end
+
+  Trabalho como a soma do trabalho feito por cada força
+
+  @math
+  \int_C \; \vec{F} \; d\vec{r} = \textstyle\sum_i W_i
+  @end
+
+* Lei da conservação da Energia mecânica
+
+  Quando apenas atuam forças conservativas as seguintes igualdades
+  verificam-se:
+
+  @math
+  E = E_c + E_p
+  @end
+
+  @math
+  F_x = - \frac{d E_p}{dx}
+  @end
+
+  Pontos de equilíbrio:
+
+  - Ponto Estável\: A força e a energia potencial são 0.
+  - Ponto Instável\: A força é 0 mas a energia potencial é não nula, o corpo
+    estar em repouso nesta posição implica que a mínima perturbação fará com
+    este saia de equilíbrio.
+
+  Para sistemas com forças não conservativas, as seguintes igualdades
+  verificam-se:
+
+  @math
+  \frac{1}{2} m \left\lvert \vec{v_1} \right\rvert + E_{p1}
+  = \frac{1}{2} m \left\lvert \vec{v_0} \right\rvert + E_{p0}
+  + W_{0,1}^\text{(não conservativo)}
+  @end
+
+  @math
+  W_{0,1} = W_{0,1}^\text{(conservativo)} + W_{0,1}^\text{(não conservativo)}
+  = E_{p0} - E_{p1} + W_{0,1}^\text{(não conservativo)}
+  @end
+
+* Potência
+
+  @math
+  P_0 = \vec{F} \cdot \vec{v}
+  @end
+
+* Integração numérica
+** Aproximação retangular
+
+   @math
+   \int_{x_i}^{x_{i+1}} f(x) \; dx \approx f(x_i) \delta x
+   @end
+
+   @code python
+   dx = (b - a)/n
+   I = dx * np.sum(f[0:n])
+   @end
+
+** Aproximação trapezoidal
+
+   @math
+   \int_{x_i}^{x_{i+1}} f(x) \; dx \approx \frac{f(x_{i+1}) + f(x_i)}{2} \delta x
+   @end
+
+   @code python
+   dx = (b - a)/n
+   I = dx * ((f[0] + f[n]) * 0.5 + np.sum(f[1:n]))
+   @end
+
+* Lei da conservação do momento
+
+  @math
+  \int_{t_0}^{t_1} \vec{F}(t) \; dt = \vec{p_1} - \vec{p_0}
+  @end
+
+  @math
+  \vec{F} = m\vec{a} = m \frac{d\vec{v}}{dt} = \frac{d\vec{p}}{dt}
+  @end
+
+* Colisões
+
+  @math
+  m_a \vec{a_a} = - m_b \vec{a_b}
+  @end
+
+  @math
+  \vec{P} = m_a \vec{v_a} + m_b \vec{v_b}
+  @end

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">  
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<title>Exercício 1 Boletim de inscrição</title>
+		<link rel="stylesheet" type="text/css" href="Teste_prático_Andre_Fonseca_Joao_Tomaz_ex1.css"/>
+		<script type="text/javascript" src="Teste_pratico_Andre_Fonseca_Joao_Tomaz_ex1.js"></script>
+	</head>
+	<body>
+	<form name="BoletimDeInscrição" method="post" action="http://192.168.160.36/FormEcho.aspx">
+		<div id="form1" style="width:80%">
+			<table style="width:825px" border= "1"> 
+				<tr>
+					<th colspan="2" id="BI" style="height:50px"><h2 class="estilo">Boletim de inscrição</h2></th>
+				</tr>
+				<tr>
+					<th id="FNC" style="width:100px">
+					<div >
+					<label  for = "Fn">Name</label>
+					</div>
+					</th>
+					<td id="nomes">
+					<input style="width:300px" type="text" id="Fn" Name="Name" placeholder="Insira o seu nome"></input>
+					<span id="nomeerro">
+					</span>
+					</td>
+					
+				</tr>
+				<tr>
+					
+					<th  id="loginC" style="width:100px">
+					<div>
+					<label  for = "login">Login</label>
+					</div>
+					</th>
+					
+					<td id="logins">
+					<input style="width:300px" type="text" id="login" Name="Login" placeholder="Insira o seu login"></input>
+					<span id="loginerro">
+					</span>
+					</td>
+					
+				</tr>
+				<tr>
+					
+					<th id="PasswordC">
+					<div >
+					<label  for = "Password">Password</label>
+					
+					</div>
+					</th>
+					
+					<td id="passs">
+					<input type="password" id="Password" Name="Passw" placeholder="Insira a sua password"></input>
+					<span id="passerro"></span>
+					</td>
+					
+				</tr>
+			</table>
+		</div>
+		
+		<div id="form2" style="width:70%">
+			<table style="width:825px" border="1">
+				<tr>
+					<th rowspan="2" id="dis" style="width:100px">
+					<label >Disciplinas</label>
+					<span id="disc"></span>
+					</th>
+
+					<td id="dissem1" style="width:339px">
+					<fieldset id="sem1">
+					<legend>1º semestre - Curriculares</legend>
+					<input type="checkbox" name="Csem1" id="ALGA" value="Algebra linear e geometria analitica">Álgebra Linear e Geometria Analítica</input><br/>
+					<input type="checkbox" name="Csem1" id="EF" value="elementos de fisica">Elementos de Fisica</input><br/>
+					<input type="checkbox" name="Csem1" id="CI" value="calculo 1">Cálculo I</input><br/>
+					<input type="checkbox" name="Csem1" id= "ITW" value="introduçao as tecnologias web">Introdução às Tecnologias Web</input><br/>
+					<input type="checkbox" name="Csem1" id="FP" value="Fundamentos de Programação">Fundamentos de Programação</input><br/>
+					</div>
+					</fieldset>
+					</td>
+					
+					<td id="dissem2">
+					<fieldset id="sem2">
+					<legend>2º semestre - Curriculares</legend>
+					<input type="checkbox" name="Csem2" id="MAS" value="modelacao e analise de sistemas">Modelação e Análise de Sistemas</input><br/>
+					<input type="checkbox" name="Csem2" id="CII" value="Calculo II">Cálculo II</input><br/>
+					<input type="checkbox" name="Csem2" id="MD" value="matematica discreta">Matemática Discreta</input><br/>
+					<input type="checkbox" name="Csem2" id= "IAC" value="introduçao a arquitetura de computadores">Introdução à Arquitetura de Computadores</input><br/>
+					<input type="checkbox" name="Csem2" id="POO" value="programacao orientada a objetos">Programação Orientada a Objetos</input><br/>
+					</fieldset>
+					</td>
+				</tr>
+				<tr>
+					<td id="dissem1o">
+					<fieldset id="sem1o">
+					<legend>1º semestre - Opcionais</legend>
+					<input type="radio"	 name="Osem1" id="Musica" value=" Música">Música</input>		
+					<input type="radio"	 name="Osem1" id="T" value=" Teatro">Teatro</input>
+					<input type="radio"	 name="Osem1" id="C" value=" Cinema">Cinema</input>
+					<input type="radio"	 name="Osem1" id="F" value=" Fotografia">Fotografia</input>	
+					</fieldset>
+					</td>
+					<td id="dissem2o">
+					<fieldset id="sem2o">
+					<legend >2º semestre - Opcionais</legend>
+					<input type="radio"	 name="Osem2" id="M2" value=" Música">Música</input>		
+					<input type="radio"	 name="Osem2" id="T2" value=" Teatro">Teatro</input>
+					<input type="radio"	 name="Osem2" id="C2" value=" Cinema">Cinema</input>
+					<input type="radio"	 name="Osem2" id="F2" value=" Fotografia">Fotografia</input>	
+					</fieldset>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div style="width:70%">	
+			<center><input type="submit" onclick="return validar()"></input></center>
+		</div>
+
+	</form>
+	</body>
+	</html>
+
+

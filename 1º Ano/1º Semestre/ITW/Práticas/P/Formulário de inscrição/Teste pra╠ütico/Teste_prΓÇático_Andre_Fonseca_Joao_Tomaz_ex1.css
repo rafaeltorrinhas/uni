@@ -1,0 +1,58 @@
+#BI {
+	background:black;
+}
+h2.estilo{
+	color:yellow;
+}
+#FNC {
+	background-color: black;
+	color:white;
+}
+#nomes{
+	border:1px dashed;
+}
+#logins{
+	border:1px dashed;
+}
+#passs{
+	border:1px dashed;
+}
+#loginC {
+	background-color: black;
+	color:white;
+}
+#PasswordC {
+	background-color: black;
+	color:white;
+}
+#dis{
+	background-color: black;
+	color:white;
+}
+#vazio{
+	background-color: black;
+}
+#sem1o{
+	background-color: rgb(230,230,230);
+}
+#sem2o{
+	background-color: rgb(230,230,230);
+}
+#sem1{
+	background-color: rgb(230,230,230);
+}
+#sem2{
+	background-color:rgb(230,230,230);
+}
+#dissem1{
+	border:1px dashed;
+}
+#dissem2{
+	border:1px dashed;
+}
+#dissem1o{
+	border:1px dashed;
+}
+#dissem2o{
+	border:1px dashed;
+}

@@ -1,0 +1,40 @@
+
+Alínea 1) ----------------------------------
+
+[Pacote Turístico Tranquilidade: 5 noites, 300.0€ / pessoa / noite
+[V1009] Voo TAP932, em 2022-07-30, classe TURISTICA
+[A1010] Alojamento B&B com 3 quartos, ocupação máxima 5 pessoas, em regime de PEQUENOALMOCO
+
+, Pacote Turístico Relaxar: 7 noites, 800.0€ / pessoa / noite
+[V1011] Voo QTR80V, em 2022-08-02, classe PRIMEIRA
+[A1012] Alojamento CoolResort com 2 quartos, ocupação máxima 4 pessoas, em regime de TUDOINCLUIDO
+[T1013] Transporte para 5 ocupantes, HIBRIDO, Kms máximos: 1000
+
+, Pacote Turístico Férias ativas: 8 noites, 400.0€ / pessoa / noite
+[V1014] Voo TAP1477, em 2022-08-10, classe TURISTICA
+[V1015] Voo TAP1477, em 2022-08-11, classe TURISTICA
+[A1016] Alojamento GreatPlace com 1 quartos, ocupação máxima 3 pessoas, em regime de MEIAPENSAO
+[T1017] Transporte para 2 ocupantes, ELETRICO, Kms máximos: 2000
+
+]
+[Pacote Turístico Tranquilidade: 5 noites, 300.0€ / pessoa / noite
+[V1009] Voo TAP932, em 2022-07-30, classe TURISTICA
+[A1010] Alojamento B&B com 3 quartos, ocupação máxima 5 pessoas, em regime de PEQUENOALMOCO
+
+, Pacote Turístico Relaxar: 7 noites, 800.0€ / pessoa / noite
+[V1011] Voo QTR80V, em 2022-08-02, classe PRIMEIRA
+[A1012] Alojamento CoolResort com 2 quartos, ocupação máxima 4 pessoas, em regime de TUDOINCLUIDO
+[T1013] Transporte para 5 ocupantes, HIBRIDO, Kms máximos: 1000
+
+, Pacote Turístico Férias ativas: 8 noites, 400.0€ / pessoa / noite
+[V1014] Voo TAP1477, em 2022-08-10, classe TURISTICA
+[V1015] Voo TAP1477, em 2022-08-11, classe TURISTICA
+[A1016] Alojamento GreatPlace com 1 quartos, ocupação máxima 3 pessoas, em regime de MEIAPENSAO
+[T1017] Transporte para 2 ocupantes, ELETRICO, Kms máximos: 2000
+
+, Pacote Turístico Não existe: 0 noites, 0.0€ / pessoa / noite
+
+]
+
+Alínea 2) ----------------------------------
+

@@ -1,0 +1,10 @@
+{
+    "defaultProvider": "cdnjs",
+    "libraries": [
+        {
+            "destination": "wwwroot/lib/font-awesome/dist/",
+            "library": "font-awesome@4.7.0"
+        }
+    ],
+    "version": "1.0"
+}

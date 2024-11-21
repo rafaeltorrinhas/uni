@@ -1,0 +1,14 @@
+﻿/* TODO: escrever o código em falta aqui... */
+
+body {
+    font-family: "Open Sans";
+}
+
+.banner {
+    height: 420px;
+    background-image: url(banner.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+}

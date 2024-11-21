@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css' integrity='sha512-tx5+1LWHez1QiaXlAyDwzdBTfDjX07GMapQoFTS74wkcPMsI3So0KYmFe6EHZjI8+eSG0ljBlAQc3PQ5BTaZtQ==' crossorigin='anonymous'/>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css' integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==' crossorigin='anonymous'/>
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div class="container" style="height:1000px">
+      <!-- Top navbar -->
+      <div class="fixed-top-container">
+        <nav class="fixed-top justify-content-between">
+          <a href="./index.html"><img src="./img/Logo2.png" alt=""></a>
+          <a href="./notificacoes.html"><i class="fas fa-bell"></i></a>
+        </nav>
+      </div>
+      <!-- Page content -->
+      <p></p>
+      <div class="content">
+        <p class="center" style="font-size: 20px;"><b>Envio de uma encomenda</b></p>
+        <div class="field" style="height: 800px; margin: 20px;">
+         <form id="myForm">
+         <div class="row">
+            <p></p>
+            <p class="center">Tamanho da Encomenda (cm)</p>
+          
+            <div class="row col-4"> 
+              <input type="text" id="comp" class="normal" style="margin-left: 30px; width: 90px; height: 50px; font-size:10px;text-align: center" placeholder="Comprimento" required>
+              <span id="compError" class="error-message"></span>
+          </div>
+          <div class="row col-4">
+              <input type="text" id="larg" class="normal" style="margin-left: 40px; width: 90px; height: 50px; font-size:10px;text-align: center;" placeholder="Largura" required>
+              <span id="largError" class="error-message"></span>
+          </div>
+          <div class="row col-6">
+              <input type="text" id="alt" class="normal" style="margin-left: 50px; width: 90px; height: 50px; font-size:10px;text-align: center;" placeholder="Altura" required>
+              <span id="altError" class="error-message"></span>
+          </div>
+          
+          </div>
+          <div class="row">
+            <p></p>
+            <p class="center">Peso(kg)</p>
+            <div class="center">
+              <input type="text" id="peso" class="normal" style=" width: 90px; height: 50px; font-size:10px;text-align: center;" placeholder="Peso">
+          </div>
+          <div class="row center">
+            <div class="row center">
+              <p></p>
+              <label for="enviarDe">Enviar de:</label>
+              <select id="enviarDe" class="dropdown normal center" style="width: 150px;" required>
+                  <option value="Cacifo1">Cacifo DETI</option>
+                  <option value="Cacifo2">Cacifo CMViseu</option>
+                  <option value="Cacifo3">Cacifo FEUP</option>
+                  <option value="Cacifo4">Cacifo TÉCNICO</option>
+              </select>
+              <span id="enviarDeError" class="error-message"></span>
+              <p></p>
+              <label for="para">Para:</label>
+              <select id="para" class="dropdown normal center" style="width: 150px;">
+                  <option value="Cacifo1">Cacifo DETI</option>
+                  <option value="Cacifo2">Cacifo CMViseu</option>
+                  <option value="Cacifo3">Cacifo FEUP</option>
+                  <option value="Cacifo4">Cacifo TÉCNICO</option>
+              </select>
+              <span id="paraError" class="error-message"></span>
+                <p class="center" style="font-size: 20px;"><b>Distribuidora</b></p>
+                <div class="center">
+                  <select id="deliveryCompany" name="deliveryCompany">
+                    <option value="dpd">DPD Portugal</option>
+                    <option value="gls">GLS</option>
+                    <option value="ups">UPS</option>
+                  </select>
+                </div>
+                <div class="row center">
+                  <p class="center">Método de Pagamento</p>
+                  <div class="row center" style="display: flex; justify-content: space-between;">
+                    <div class="col-4">
+                      <input type="radio" id="mbway" name="pagamento" value="mbway">
+                      <label for="mbway">MBWay</label>
+                    </div>
+                    <div class="col-4">
+                      <input type="radio" id="cartao" name="pagamento" value="cartao">
+                      <label for="cartao">⠀Cartão</label>
+                    </div>
+                    <div class="col-4">
+                      <input type="radio" id="paypal" name="pagamento" value="paypal">
+                      <label for="paypal">⠀PayPal</label>
+                    </div>
+                  </div>
+                  <div id="paymentDetails" class="center">
+                    <input type="text" id="mbwayField" placeholder="Nº de telemóvel" style="display: none;">
+                    <input type="text" id="cartaoField" placeholder="Nº do cartão" style="display: none;">
+                    <input type="text" id="paypalField" placeholder="E-mail" style="display: none;">
+                  </div>
+                </div>
+                
+                
+            <p></p>
+            <div class="field" style="padding: 20px; background-color: white;">
+              <label for="estimativa">Preço: </label>
+              <input type="text" class="bg-transparent border-0" id="priceId" readonly>
+          
+              <label for="estimativa">Estimativa: </label>
+              <input type="text" class="bg-transparent border-0" id="estimativa" readonly>
+            </div>
+              <p></p>
+              <div class="row center">
+                <button id="submitBtn" type="submit" class="register text-white text-decoration-none align-content-center">Seguinte</button>
+                
+          </form>
+          </div>
+          </div>
+          <div class="row">
+            
+          </div>
+        </div>
+            </div>
+          </div>
+      </div>
+      <!-- Bottom navbar -->
+      <div class="fixed-bottom-container">
+        <nav class="fixed-bottom">
+          <a href="./index.html"><i class="fas fa-home"></i></a>
+          <a href="./tracking.html"><i class="fa fa-crosshairs" aria-hidden="true"></i></a>
+          <a href="./profile.html"><i class="fas fa-user"></i></a>
+        </nav>
+      </div>
+    </div>
+  <script src="./scripts/global.js"></script>
+  <script src="./scripts/global.js"></script>
+<script>
+    document.getElementById('mbway').addEventListener('change', function () {
+        document.getElementById('mbwayField').style.display = this.checked ? 'block' : 'none';
+        document.getElementById('cartaoField').style.display = 'none';
+        document.getElementById('paypalField').style.display = 'none';
+    });
+
+    document.getElementById('cartao').addEventListener('change', function () {
+        document.getElementById('mbwayField').style.display = 'none';
+        document.getElementById('cartaoField').style.display = this.checked ? 'block' : 'none';
+        document.getElementById('paypalField').style.display = 'none';
+    });
+
+    document.getElementById('paypal').addEventListener('change', function () {
+        document.getElementById('mbwayField').style.display = 'none';
+        document.getElementById('cartaoField').style.display = 'none';
+        document.getElementById('paypalField').style.display = this.checked ? 'block' : 'none';
+    });
+
+    document.getElementById('deliveryCompany').addEventListener('change', function () {
+        var price;
+        var estimate;
+
+        switch (this.value) {
+            case 'dpd':
+                price = '3€';
+                estimate = '3 dias úteis';
+                break;
+            case 'ups':
+                price = '5€';
+                estimate = '1 dia útil';
+                break;
+            case 'gls':
+                price = '4€';
+                estimate = '2 dias úteis';
+                break;
+            default:
+                price = '';
+                estimate = '';
+        }
+
+        document.getElementById('priceId').value = price;
+        document.getElementById('estimativa').value = estimate;
+    });
+
+    document.getElementById('submitBtn').addEventListener('click', function (event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+
+        // Collect form data
+        var formData = {
+            paymentMethod: document.querySelector('input[name="pagamento"]:checked').value,
+            deliveryCompany: document.getElementById('deliveryCompany').value,
+            price: document.getElementById('priceId').value,
+            estimate: document.getElementById('estimativa').value,
+            comprimento: document.getElementById('comp').value,
+            largura: document.getElementById('larg').value,
+            altura: document.getElementById('alt').value,
+            peso: document.getElementById('peso').value,
+            enviarde: document.getElementById('enviarDe').value,
+            para: document.getElementById('para').value
+        };
+
+        // Convert the data to JSON string
+        var formDataJson = JSON.stringify(formData);
+
+        // Store JSON data in localStorage
+        localStorage.setItem('formData', formDataJson);
+
+        // Navigate to tracking.html
+        window.location.href = './tracking.html';
+    });
+</script>
+
+
+
+  
+
+  
+</script>
+</body>
+</html>

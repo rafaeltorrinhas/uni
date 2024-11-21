@@ -1,0 +1,138 @@
+<head>
+    <meta charset="utf-8">
+    <dt class="bold title">Informação Pessoal</dt>
+    <p></p>
+    <style>
+        fieldset {
+            border: 2px solid rgba(211, 211, 211, 0.808);
+            border-radius: 0.25rem;
+        }
+
+        textarea {
+            width: 100%;
+            font-size: 14px;
+            border: 1px solid rgb(211, 211, 211);
+            border-radius: 0.25rem;
+
+        }
+
+        select,
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            border: 1px solid lightgrey
+        }
+
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 30px;
+        }
+
+        body,
+        input,
+        select,
+        textarea {
+            font-family: sans-serif;
+        }
+
+        input[type=submit],
+        input[type=reset] {
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<form name="PersonData" action="http://192.168.160.36/FormEcho.aspx" method="post">
+
+    <body>
+        <div style="margin: auto; width: 100%">
+            <fieldset>
+                <legend>Informação Pessoal</legend>
+                <input type="hidden" name="FormName" value="UserForm" />
+
+                <!--curso-->
+                <div style="font-size: 14px;">Curso:
+                    <select name="Curso" id="Curso" style="width: 70%; float: right; opacity: 70%">
+                        <option value="">--- Selecione um dos cursos ---</option>
+                        <option value="1">Licenciatura em Engenharia Informática</option>
+                        <option value="2">Mestrado Integrado em Engenharia de Computadores e Telemática</option>
+                        <option value="3">Mestrado Integrado em Engenharia Eletrónica e Telecomunicações</option>
+                        <option value="4">Outro</option>
+                    </select>
+                </div>
+
+                <!--nome-->
+                <p style="font-size: xx-small;"></p>
+                <div style="font-size: 14px;">Nome:
+                    <input type="text" name="FirstName" placeholder="Nome"
+                        style="width: 70%; float: right; opacity: 70%;" />
+                </div>
+
+                <p style="font-size: xx-small;"></p>
+
+                <!--sobrenome-->
+                <div style="font-size: 14px;" style="font-size: 14px;">Sobrenome:
+                    <input type="text" name="LastName" placeholder="Sobrenome"
+                        style="width: 70%; float: right; opacity: 70%;" />
+                </div>
+                <p style="font-size: xx-small;"></p>
+
+                <!--password-->
+                <div style="font-size: 14px;">Palavra-Passe:
+                    <input type="password" name="Password" placeholder="Digite a palavra passe"
+                        style="width: 70%; float: right; opacity: 70%;" />
+                </div>
+
+            </fieldset>
+
+        </div>
+
+        <dl></dl>
+
+        <!--comentarios-->
+        <div style="margin: auto; width: 100%;">
+            <fieldset>
+                <legend>Comentários</legend>
+                <textarea name="Comments" rows="4" cols="80" placeholder="Insira os seus comentários"></textarea>
+            </fieldset>
+
+            <p></p>
+
+            <!--meios de transporte-->
+            <div style="width:50%; float: left;">
+                <fieldset>
+                    <legend>Meios de transporte</legend>
+                    <input type="checkbox" name="vehicle" value="Bicicleta">Bicicleta<br />
+                    <input type="checkbox" name="vehicle" value="Carros">Carros<br />
+                    <input type="checkbox" name="vehicle" value="Comboio">Comboio
+                </fieldset>
+            </div>
+
+            <p></p>
+
+            <!--cor preferida-->
+            <div style="width:50%; float: left;">
+                <fieldset>
+                    <legend>Cor preferida</legend>
+                    <input type="radio" name="color" value="Azul">Azul<br />
+                    <input type="radio" name="color" value="Verde">Verde<br />
+                    <input type="radio" name="color" value="Vermelho">Vermelho<br />
+                    <input type="radio" name="color" value="Outra">Outra
+                </fieldset>
+                <dl></dl>
+
+            </div>
+
+            <!--submit/reset-->
+            <div style="text-align: center;">
+                <input name="Button" type="Submit" />
+                <input type="reset" name="resetBtn" value="Reset" />
+            </div>
+    </body>
+
+</form>

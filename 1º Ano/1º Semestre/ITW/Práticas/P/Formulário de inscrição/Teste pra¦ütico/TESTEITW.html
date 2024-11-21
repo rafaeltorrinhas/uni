@@ -1,0 +1,109 @@
+<html>
+<head>
+	<title>Teste Pr&aacute;tico</title>
+	<script type="text/javascript"></script>
+</head>
+<body>
+	<form name="PersonData" action="http://192.168.160.36/FormEcho.aspx" method="Post">
+	<table style="width:100%";"border:dotted">
+		<tr>
+			<th style="background-color:black;color:yellow;text-align:center" colspan="3">Boletim de Inscri&ccedil;&atilde;o</th>
+		</tr>
+		<tr>
+			<td style="background-color:black;color:white;text-align:center">Name</td>
+			<td><input type="textbox" name="name" value="" size="70"/></td>
+			<script type="text/javascript">
+				function checkLength()
+					{
+					var textbox = document.getElementById("textbox");
+					if(textbox.value.lenght <=100 && textbox.value.length >=10){
+					}
+					else{
+						alert("Minimo 10 caracteres e maximo 100")
+					}
+				}	
+			</script>
+		</tr>
+		<tr>
+			<td style="background-color:black;color:white;text-align:center">Login</td>
+			<td><input type="textbox" name="login" value="" size="70"/></td>
+			<script type="text/javascript">
+				function checkLength()
+					{
+					var textbox = document.getElementById("textbox");
+					if(textbox.value.lenght <=30 && textbox.value.length >=10){
+					}
+					else{
+						alert("Minimo 10 caracteres e maximo 30")
+					}
+				}	
+			</script>
+		</tr>
+		<tr>
+			<td style="background-color:black;color:white;text-align:center">Password</td>
+			<td><input type="password" name="password" value="" size="40"/></td>
+			<script type="text/javascript">
+				function checkLength()
+					{
+					var textbox = document.getElementById("textbox");
+					if(textbox.value.lenght <=30 && textbox.value.length >=7){
+					}
+					else{
+						alert("Minimo 7 caracteres e maximo 30")
+					}
+				}	
+			</script>
+		</tr>
+		<tr>
+			<th style="background-color:black;color:white;text-align:center;text-align:top" rowspan="5">Disciplinas</th>
+			<td><fieldset style="background-color:lightgrey">
+				<legend>1 Semestre</legend>
+				<input type="checkbox" name="Disciplina" value="ALGA">&Aacute;lgebra Linear e Geometria Anal&iacute;tica<br />
+				<input type="checkbox" name="Disciplina" value="EF">Elementos de F&iacute;sica<br />
+				<input type="checkbox" name="Disciplina" value="C1">C&aacute;lculo I<br />
+				<input type="checkbox" name="Disciplina" value="ITW">Introdu&ccedil;&atilde;o &agrave;s Tecnologias Web<br />
+				<input type="checkbox" name="Disciplina" value="FP">Fundamentos de Programa&ccedil;&atilde;o<br />
+			</fieldset></td>
+			<td><fieldset style="background-color:lightgrey">
+				<legend>2 Semestre</legend>
+				<input type="checkbox" name="Unidade" value="MAS">Modela&ccedil;&atilde;o e An&aacute;lise de Sistemas<br />
+				<input type="checkbox" name="Unidade" value="C2">C&aacute;lculo II<br />
+				<input type="checkbox" name="Unidade" value="MD">Matem&aacute;tica Discreta<br />
+				<input type="checkbox" name="unidade" value="IAC">Introdu&ccedil;&atilde;o &agrave; Arquitetura de Computadores<br />
+				<input type="checkbox" name="Unidade" value="POO">Programa&ccedil;&atilde;o Orientada a Objetos<br />
+			</fieldset></td>
+		</tr>
+			<td><fieldset style="background-color:lightgrey">
+				<legend>1 Semestre - Opcionais</legend>
+				<input type="radio" name="Disciplina" value="M">M&uacute;sica
+				<input type="radio" name="Disciplina1" value="T">Teatro
+				<input type="radio" name="Disciplina2" value="C">Cinema
+				<input type="radio" name="Disciplina3" value="F">Fotografia
+			</fieldset></td>
+			<td><fieldset style="background-color:lightgrey">
+				<legend>2 Semestre - Opcionais</legend>
+				<input type="radio" name="Disciplina" value="M">M&uacute;sica
+				<input type="radio" name="Disciplina1" value="T">Teatro
+				<input type="radio" name="Disciplina2" value="C">Cinema
+				<input type="radio" name="Disciplina3" value="F">Fotografia
+			</fieldset></td>
+		<tr>
+
+		</tr>
+	</table>
+<input type="hidden" name="resumo" value="" /> <!-- Soma das disciplinas escolhidas, a variável x e a variável y deverão corresponder ao número de opções escolhidas. A variável res será a soma do numero de disciplinas mais o número de disciplinas opcionais 
+	<script type="text/javascript">
+		function resumo()
+	{
+
+		var x = document.getElementById(); 
+		var y = document.getElementById();
+		var res = parseFloat(x.value)+parseFloat(y.value);
+	
+	}
+	</script> -->
+<center><input type="submit" name="Button" value="Enviar" /></center>
+
+</body>
+
+</html>

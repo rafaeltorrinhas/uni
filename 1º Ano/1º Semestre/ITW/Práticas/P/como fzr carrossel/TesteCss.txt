@@ -1,0 +1,15 @@
+TesteCss
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.carousel .carousel-item {
+    height: 500px;
+}
+
+img.carousel-item {
+    min-height: 600px;
+}

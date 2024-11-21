@@ -1,0 +1,329 @@
+@document.meta
+title: Método de Euler
+author: João Capucho
+@end
+
+O Método de Euler é utilizado para calcular a solução numérica de um dado integral
+(definido), sendo assim um método de integração numérica.
+
+* Introdução
+
+  O Método de Euler é desenvolvido a partir da definição da derivada, usando como
+  exemplo a relação entre a posição e a velocidade:
+
+  @math
+  v_x(t) = \frac{dx(t)}{dt} = \lim_{\delta t \to 0} \frac{x(t + \delta t) - x(t)}{\delta t}
+  @end
+
+  Logo, se em vez de calcularmos o limite analiticamente, aproximarmos com um
+  valor de $\delta t$ que se aproxime de 0 (mas não seja zero), podemos aproximar
+  o valor da velocidade.
+
+  @math
+  v_x(t) \approx \frac{x(t + \delta t) - x(t)}{\delta t}
+  @end
+
+  Finalmente, se manipularmos a fórmula obtemos a posição seguinte como uma função
+  da velocidade e posição atual:
+
+  @math
+  \begin{align*}
+  &v_x(t) \approx \frac{x(t + \delta t) - x(t)}{\delta t} \\
+  \implies &v_x(t) \times \delta t \approx x(t + \delta t) - x(t) \\
+  \implies &x(t + \delta t) \approx x(t) + v_x(t) \times \delta t
+  \end{align*}
+  @end
+
+  Logo se soubermos uma posição inicial e a velocidade podemos calcular a posição
+  seguinte e se repetirmos este processo várias vezes conseguimos calcular o
+  integral com algum erro, o erro é menor quanto menor for o $\delta t$ no entanto
+  isto implica mais passos para calcular o mesmo integral.
+
+* Implementação
+
+  O seguinte código implementa o método de Euler para calcular um integral, neste
+  caso posição a partir da velocidade:
+
+  @code python
+  # Parâmetros
+  dt = 0.01 # δt - tamanho do passo
+  t0 = 0 # Tempo inicial
+  tf = 4.0 # Tempo final
+  y0 = 0 # Posição inicial
+
+  # Número de passos/iterações
+  #
+  # + 0.1 para garantir que não há arrendodamentos
+  # para baixo
+  n = int((tf-t0) / dt + 0.1)
+
+  t = np.zeros(n + 1) # Tempo
+  y = np.zeros(n + 1) # Posição
+  vy = np.zeros(n + 1) # Velocidade
+
+  # Valores inicias
+  t[0] = t0
+  y[0] = y0
+
+  for i in range(n):
+    vy[i] = 5 # Em vez de uma constante pode-se também utilizar
+              # uma expressão ou função v(t) que calcula a velocidade
+              # a partir do tempo
+
+    # x(t + δt) = x(t) + v(t) * δt
+    y[i + 1] = y[i] + vy[i] * dt
+    t[i + 1] = t[i] + dt
+  @end
+
+** Integração de segunda ordem
+
+   Em vários problemas é necessário calcular a posição a partir da aceleração,
+   sendo assim necessário calcular o integral de segunda ordem, isto pode ser
+   feito no método de Euler no mesmo loop, calculando a velocidade primeiro e
+   depois a posição usando a velocidade:
+
+   @code python
+   # Parâmetros
+   dt = 0.01 # δt - tamanho do passo
+   t0 = 0 # Tempo inicial
+   tf = 4.0 # Tempo final
+   y0 = 0 # Posição inicial
+   vy0 = 0 # Velocidade inicial
+   g = 9.8 # Aceleração gravítica
+
+   # Número de passos/iterações
+   #
+   # + 0.1 para garantir que não há arrendodamentos
+   # para baixo
+   n = int((tf-t0) / dt + 0.1)
+
+   t = np.zeros(n + 1) # Tempo
+   y = np.zeros(n + 1) # Posição
+   vy = np.zeros(n + 1) # Velocidade
+   ay = np.zeros(n + 1) # Aceleração
+
+   # Valores inicias
+   vy[0] = vy0
+   t[0] = t0
+   y[0] = y0
+
+   for i in range(n):
+     ay[i] = g # Pode também ser substituído por uma
+               # expressão ou uma função a(t).
+
+     # Primeira ordem (velocidade)
+     # v(t + δt) = v(t) + a(t) * δt
+     vy[i + 1] = vy[i] + ay[i] * dt
+     # Segunda ordem (posição)
+     # x(t + δt) = x(t) + v(t) * δt
+     y[i + 1] = y[i] + vy[i] * dt 
+     t[i + 1] = t[i] + dt
+   @end
+
+   Esta abordagem pode ser utilizada para ordens maiores.
+
+** Integração multidimensionais
+
+   Em alguns problemas é necessário trabalhar com mais do que uma dimensão (por
+   exemplo movimentos em três dimensões), o método de Euler pode ser estendido
+   para trabalhar com vetores em vez de escalares de forma a resolver este
+   problema:
+
+   @code python
+   # Parâmetros
+   dt = 0.001 # δt - tamanho do passo
+   t0 = 0 # Tempo inicial
+   tf = 1 # Tempo final
+   x0 = np.array([0, 0, 23.8]) # Posição inicial
+   v0 = np.array([25, 5, -50]) # Velocidade inicial
+
+   # Número de passos/iterações
+   #
+   # + 0.1 para garantir que não há arrendodamentos
+   # para baixo
+   n = int((tf-t0) / dt + 0.1)
+   # Como a integração é agora para vetores multidimensionais, precisamos de
+   # definir arrays de arrays, o numpy aceita tuplos para definir as dimensões
+   # dos arrays, neste caso é um array de `n` arrays de 3 elementos.
+   shape = (n + 1, 3)
+
+   t = np.zeros(n + 1) # Tempo
+   x = np.zeros(shape) # Posição
+   v = np.zeros(shape) # Velocidade
+   a = np.zeros(shape) # Aceleração
+
+   # Valores iniciais
+   a[0] = np.array([0, -9.8, 0])
+   v[0] = v0
+   t[0] = t0
+   x[0] = x0
+
+   for i in range(n):
+     a[i + 1] = np.array([0, -9.8, 0])
+     # O Numpy permite também realizar operações entre arrays como se fossem vetores
+     v[i + 1] = v[i] + a[i] * dt
+     x[i + 1] = x[i] + v[i] * dt
+     t[i + 1] = t[i] + dt
+   @end
+
+** Obter um valor num dado instante
+
+   O seguinte código permite obter um valor calculado através do método de
+   Euler num dado instante.
+
+   @code python
+   # Instante onde está o valor, neste caso 3 segundos
+   target = 3
+   # Calcular o indíce nos arrays mais perto do instante que queremos obter,
+   # depende do instante e do passo
+   targetIdx = int(np.ceil(target / dt))
+
+   # Agora basta aceder ao array que tem o valor (neste caso `vy`, que contêm a
+   # velocidade) com `targetIdx` para obter o valor no instante.
+   v = vy[targetIdx]
+   # Obtemos também o instante em que foi calculado o valor para verificar que
+   # o índice escolhido está correto.
+   I = t[targetIdx]
+   @end
+
+** Obter um máximo e o instante onde ocorreu
+
+   Este código permite obter o índice onde um dado array tem o seu máximo e
+   obter assim o valor máximo e o instante onde ocorreu.
+
+   @code python
+   # Calcular o índice onde ocorre o máximo no array (neste caso `y`, que
+   # contêm a posição)
+   idx = y.argmax()
+   # Obter o valor
+   yMax = y[idx]
+   # Obter o instante em que ocorreu
+   tMax = t[idx]
+   @end
+
+** Obter o primeiro zero e o instante onde ocorreu
+
+   É apresentado o código para obter o índice onde um array tem o seu primeiro
+   zero e consequentemente obter o valor e o instante.
+
+   O código é baseado no teorema dos valores intermédios, que diz dada uma
+   função contínua e dois pontos pertencentes a ela, todos os valores das
+   ordenadas entre os pontos terão que existir entre as suas abcissas. Logo se
+   considerarmos o ponto atual e o ponto seguinte e os multiplicarmos, se o
+   resultado for negativo então fizemos a transição de positivo para negativo e
+   passamos por zero.
+
+   @code python
+   for i in range(n):
+     if y[i] == 0 or y[i] * y[i + 1] < 0:
+       idx = i
+       break
+
+   yZero = y[idx]
+   tZero = t[idx]
+   @end
+
+* Erro e escolha do passo
+
+  Como referido anteriormente, um passo menor implica também um erro menor, no
+  entanto também implica a necessidade de computar mais passos, logo é necessário
+  escolher o maior passo possível que tenha um erro razoável.
+
+  O erro do método de Euler pode ser calculado de duas maneiras, primeiro temos o
+  erro local que é o erro relativo a um passo, este pode ser calculado através da
+  expansão da série de taylor:
+
+  @math
+  x(t + \delta t) = x(t)
+  + \left. \frac{dx}{dt} \right|_{t} \; \delta t
+  + \left. \frac{1}{2} \frac{d^2 x}{dt^2} \right|_{t} \; \delta t^2
+  + \left. \frac{1}{3!} \frac{d^3 x}{dt^3} \right|_{t} \; \delta t^3
+  + o(\delta t^4)
+  @end
+
+  A função $o$ representa todos os termos de ordem superior ao seu argumento
+  (neste caso $\delta t^4$, ordem 4+), escrevemos desta forma porque termos
+  extra não nos interessam e como $o$ converge para 0 podemos utilizar esta
+  notação. Poderíamos ter escrito mais termos (ou até omitidos alguns).
+
+  Agora que já temos a série de taylor podemos comparar ao método de Euler:
+
+  @math
+  x(t + \delta t) = x(t) + v_x(t) \delta t
+  @end
+
+  Como podemos ver todos os termos de ordem igual ou superior a 2 foram
+  descartados, logo o erro de truncatura será $o(t^2)$, o que implica com o
+  erro local é proporcional a $t^2$.
+
+  Finalmente podemos calcular o error global que é a acumulação do erro ao fim
+  de $N$ passos, como já vimos o erro local é proporcional a $\delta t^2$, logo
+  o erro global é proporcional a $N\delta t^2$, se observarmos agora a
+  definição do passo:
+
+  @math
+  N \delta t^2
+  = N \times \left( \frac{t_f - t_0}{N} \right)^2
+  = N \times \frac{\left( t_f - t_0 \right)^2}{N ^ 2} 
+  = \frac{\left( t_f - t_0 \right)^2}{N} 
+  = \left( t_f - t_0 \right) \delta t 
+  @end
+
+  Logo o erro global é também proporcional a $\left( t_f - t_0 \right) \delta t$.
+
+* Método de Euler-Cromer
+
+  O método de Euler acumula bastante erro para movimentos periódicos, sendo
+  necessário adaptá-lo para trabalhar com este tipo de movimentos, a este
+  método adaptado chama-se método de Euler-Cromer ou Euler modificado e a
+  diferença é que o último passo da integração é feito utilizando o valor
+  da derivada para o instante seguinte invés do instante atual:
+
+  @math
+  \begin{align*}
+  &v_x(t + \delta t) \approx v(t) + a_x(t) \times \delta t \\
+  &\boldsymbol{ x(t + \delta t) \approx x(t) + v_x(t + \delta t) \times \delta t }
+  \end{align*}
+  @end
+
+  Ficando com o seguinte código para a implementar.
+
+  @code python
+  # Parâmetros
+  dt = 0.01 # δt - tamanho do passo
+  t0 = 0 # Tempo inicial
+  tf = 4.0 # Tempo final
+  y0 = 0 # Posição inicial
+  vy0 = 0 # Velocidade inicial
+  g = 9.8 # Aceleração gravítica
+
+  # Número de passos/iterações
+  #
+  # + 0.1 para garantir que não há arrendodamentos
+  # para baixo
+  n = int((tf-t0) / dt + 0.1)
+
+  t = np.zeros(n + 1) # Tempo
+  y = np.zeros(n + 1) # Posição
+  vy = np.zeros(n + 1) # Velocidade
+  ay = np.zeros(n + 1) # Aceleração
+
+  # Valores inicias
+  vy[0] = vy0
+  t[0] = t0
+  y[0] = y0
+
+  for i in range(n):
+    ay[i] = g # Pode também ser substituído por uma
+              # expressão ou uma função a(t).
+
+    # Primeira ordem (velocidade)
+    # v(t + δt) = v(t) + a(t) * δt
+    vy[i + 1] = vy[i] + ay[i] * dt
+    # Segunda ordem (posição)
+    # x(t + δt) = x(t) + v(t + δt) * δt
+    y[i + 1] = y[i] + vy[i + 1] * dt 
+    t[i + 1] = t[i] + dt
+   @end
+
+  O erro de truncatura é idêntico ao método de Euler normal.

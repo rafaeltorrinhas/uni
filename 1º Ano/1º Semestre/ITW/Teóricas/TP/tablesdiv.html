@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Table with Divs</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .border-right {
+            border-right: 1px solid black;
+        }
+        .border-bottom {
+            border-bottom: 1px solid black;
+        }
+        .fixed-size-container {
+            width: 1000px;
+            height: 700px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabela 1000px por 700px com divs</h1>
+    <div class="container fixed-size-container">
+        <div class="row border-bottom" style="height: 250px;">
+            <div class="col-3 border-right">
+                quadrado 250px por 250px
+            </div>
+            <div class="col-9">
+        
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-6">
+                
+            </div>
+            <div class="col-6">
+                
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
