@@ -1,0 +1,36 @@
+1238, Académica, 1322
+845, Arouca, 1367
+1027, Beira-Mar, 1343
+908, Belenenses, 1358
+19, Benfica, 1797
+458, Boavista, 1444
+458, Boavista, 1444
+75, Braga, 1655
+1864, CD das Aves, 1266
+400, CD Santa Clara, 1460
+721, Chaves, 1389
+564, CS Marítimo Madeira, 1421
+632, Estoril, 1406
+492, FC Famalicão, 1436
+492, FC Famalicão, 1436
+14, FC Porto, 1831
+625, FC Vizela, 1407
+1518, Feirense, 1294
+262, Gil Vicente FC, 1517
+1269, Leixões, 1318
+752, Moreirense, 1384
+1847, Nacional, 1268
+1090, Naval 1º de Maio, 1337
+1158, Olhanense, 1329
+442, Paços de Ferreira, 1448
+1479, Penafiel, 1298
+745, Portimonense, 1385
+464, Rio Ave, 1443
+464, Rio Ave, 1443
+731, SC Farense, 1387
+20, Sporting, 1797
+951, Tondela, 1353
+976, Uniao da Madeira, 1350
+1598, União de Leiria, 1288
+361, Vitória Guimarães, 1471
+815, Vitória Setúbal, 1371
