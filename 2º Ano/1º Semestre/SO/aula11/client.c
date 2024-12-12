@@ -13,7 +13,7 @@ int main(void)
 {
     MESSAGE msg;
 
-    /* opening the communication channel */
+     /*opening the communication channel */
     cliOpenComm();
 
     /* use the service */
