@@ -1,0 +1,49 @@
+Jan 30 23:46:29.625 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Jan 30 23:46:29.625 HYPERVISOR: Started on IP = localhost, TCP port = 59387.
+Jan 30 23:46:29.636 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 30 23:46:29.636 HYPERVISOR: exec_cmd: hypervisor working_dir /home/sobral/Desktop/2ANO/Projetos/RS/RS_Projeto/Projeto/project-files/dynamips 
+Jan 30 23:46:29.636 GENERAL: working_dir=/home/sobral/Desktop/2ANO/Projetos/RS/RS_Projeto/Projeto/project-files/dynamips
+Jan 30 23:46:29.637 HYPERVISOR: exec_cmd: hypervisor working_dir /home/sobral/Desktop/2ANO/Projetos/RS/RS_Projeto/Projeto/project-files/dynamips/782e3b6c-451f-43ff-ba91-3ec0b8d92745 
+Jan 30 23:46:29.637 GENERAL: working_dir=/home/sobral/Desktop/2ANO/Projetos/RS/RS_Projeto/Projeto/project-files/dynamips/782e3b6c-451f-43ff-ba91-3ec0b8d92745
+Jan 30 23:46:29.637 HYPERVISOR: exec_cmd: vm create R4 6 c3725 
+Jan 30 23:46:29.637 VM: VM R4 created.
+Jan 30 23:46:29.638 HYPERVISOR: exec_cmd: vm set_con_tcp_port R4 5023 
+Jan 30 23:46:29.638 HYPERVISOR: exec_cmd: c3725 get_mac_addr R4 
+Jan 30 23:46:29.639 HYPERVISOR: exec_cmd: vm set_disk0 R4 0 
+Jan 30 23:46:29.640 HYPERVISOR: exec_cmd: vm set_ios R4 /root/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Jan 30 23:46:29.641 HYPERVISOR: exec_cmd: c3725 set_mac_addr R4 c206.25be.0000 
+Jan 30 23:46:29.642 HYPERVISOR: exec_cmd: vm set_nvram R4 256 
+Jan 30 23:46:32.830 HYPERVISOR: exec_cmd: nio create_udp udp-11b20b7d-eaf0-42de-a877-bd20e8048720 10066 127.0.0.1 10067 
+Jan 30 23:46:33.043 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 0 0 udp-11b20b7d-eaf0-42de-a877-bd20e8048720 
+Jan 30 23:46:33.044 HYPERVISOR: exec_cmd: vm get_status R4 
+Jan 30 23:46:33.610 HYPERVISOR: exec_cmd: nio create_udp udp-36b627bf-c1f9-4297-97dd-5ebda25a4c5b 10090 127.0.0.1 10091 
+Jan 30 23:46:33.612 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 0 1 udp-36b627bf-c1f9-4297-97dd-5ebda25a4c5b 
+Jan 30 23:46:33.612 HYPERVISOR: exec_cmd: vm get_status R4 
+Jan 30 23:46:42.486 HYPERVISOR: exec_cmd: vm set_ghost_status R4 2 
+Jan 30 23:46:42.488 HYPERVISOR: exec_cmd: vm set_ghost_file R4 /home/sobral/Desktop/2ANO/Projetos/RS/RS_Projeto/Projeto/project-files/dynamips/c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Jan 30 23:46:42.489 HYPERVISOR: exec_cmd: vm get_status R4 
+Jan 30 23:46:42.490 HYPERVISOR: exec_cmd: vm set_config R4 configs/i6_startup-config.cfg 
+Jan 30 23:46:42.490 HYPERVISOR: exec_cmd: vm start R4 
+Jan 30 23:55:12.811 HYPERVISOR: exec_cmd: vm extract_config R4 
+Jan 30 23:55:12.812 HYPERVISOR: exec_cmd: vm extract_config R4 
+Jan 31 00:12:42.987 HYPERVISOR: exec_cmd: vm extract_config R4 
+Jan 31 00:12:43.035 HYPERVISOR: exec_cmd: vm extract_config R4 
+Jan 31 00:27:43.162 HYPERVISOR: exec_cmd: vm extract_config R4 
+Jan 31 00:27:43.173 HYPERVISOR: exec_cmd: vm extract_config R4 
+Jan 31 01:01:43.541 HYPERVISOR: exec_cmd: vm extract_config R4 
+Jan 31 01:01:43.544 HYPERVISOR: exec_cmd: vm extract_config R4 
+Jan 31 01:46:44.036 HYPERVISOR: exec_cmd: vm extract_config R4 
+Jan 31 01:46:44.039 HYPERVISOR: exec_cmd: vm extract_config R4 
+Jan 31 02:32:21.138 HYPERVISOR: exec_cmd: vm get_status R4 
+Jan 31 02:32:21.140 HYPERVISOR: exec_cmd: vm stop R4 
+Jan 31 02:32:21.234 VM: VM R4 shutdown.
+Jan 31 02:32:21.235 HYPERVISOR: exec_cmd: vm extract_config R4 
+Jan 31 02:42:36.972 HYPERVISOR: exec_cmd: vm get_status R4 
+Jan 31 02:42:36.975 HYPERVISOR: exec_cmd: vm extract_config R4 
+Jan 31 02:42:37.477 HYPERVISOR: exec_cmd: vm get_status R4 
+Jan 31 02:42:37.478 HYPERVISOR: exec_cmd: vm extract_config R4 
+Jan 31 02:42:37.480 HYPERVISOR: exec_cmd: vm delete R4 
+Jan 31 02:42:37.480 VM: VM R4 destroyed.
+Jan 31 02:42:37.481 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 31 02:42:37.932 HYPERVISOR: Stopped.
+Jan 31 02:42:37.932 GENERAL: reset done.

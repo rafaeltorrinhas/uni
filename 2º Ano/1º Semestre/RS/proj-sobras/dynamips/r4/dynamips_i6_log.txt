@@ -1,0 +1,66 @@
+Jan 27 23:14:00.082 HYPERVISOR: Release 0.2.21-amd64/Linux (tag 2019071212)
+Jan 27 23:14:00.082 HYPERVISOR: Started on IP = localhost, TCP port = 45099.
+Jan 27 23:14:00.092 HYPERVISOR: exec_cmd: hypervisor version 
+Jan 27 23:14:00.092 HYPERVISOR: exec_cmd: hypervisor working_dir /home/sobral/Desktop/2ANO/Projetos/RS/RS_Projeto/Projeto/project-files/dynamips 
+Jan 27 23:14:00.092 GENERAL: working_dir=/home/sobral/Desktop/2ANO/Projetos/RS/RS_Projeto/Projeto/project-files/dynamips
+Jan 27 23:14:00.092 HYPERVISOR: exec_cmd: hypervisor working_dir /home/sobral/Desktop/2ANO/Projetos/RS/RS_Projeto/Projeto/project-files/dynamips/b4a67b35-cdd5-450f-916b-8af3e05e91ee 
+Jan 27 23:14:00.092 GENERAL: working_dir=/home/sobral/Desktop/2ANO/Projetos/RS/RS_Projeto/Projeto/project-files/dynamips/b4a67b35-cdd5-450f-916b-8af3e05e91ee
+Jan 27 23:14:00.093 HYPERVISOR: exec_cmd: vm create R3 5 c3725 
+Jan 27 23:14:00.093 VM: VM R3 created.
+Jan 27 23:14:00.093 HYPERVISOR: exec_cmd: vm set_con_tcp_port R3 5022 
+Jan 27 23:14:00.093 HYPERVISOR: exec_cmd: c3725 get_mac_addr R3 
+Jan 27 23:14:00.094 HYPERVISOR: exec_cmd: vm set_disk0 R3 0 
+Jan 27 23:14:00.094 HYPERVISOR: exec_cmd: vm set_ios R3 /root/GNS3/images/IOS/c3725-advipservicesk9-mz.124-21.image 
+Jan 27 23:14:00.094 HYPERVISOR: exec_cmd: c3725 set_mac_addr R3 c205.2585.0000 
+Jan 27 23:14:00.095 HYPERVISOR: exec_cmd: vm set_nvram R3 256 
+Jan 27 23:14:02.176 HYPERVISOR: exec_cmd: nio create_udp udp-330d63d1-5a37-4154-9cc4-fcd3abae82b5 10064 127.0.0.1 10065 
+Jan 27 23:14:02.391 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 0 0 udp-330d63d1-5a37-4154-9cc4-fcd3abae82b5 
+Jan 27 23:14:02.392 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 27 23:55:38.500 HYPERVISOR: exec_cmd: nio create_udp udp-caaa5b4a-ae64-4e86-b68d-d9b490dedf42 10082 127.0.0.1 10083 
+Jan 27 23:55:38.502 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 0 1 udp-caaa5b4a-ae64-4e86-b68d-d9b490dedf42 
+Jan 27 23:55:38.502 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 28 00:02:11.033 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Jan 28 00:02:11.034 HYPERVISOR: exec_cmd: vm set_ghost_file R3 /home/sobral/Desktop/2ANO/Projetos/RS/RS_Projeto/Projeto/project-files/dynamips/c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Jan 28 00:02:11.035 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 28 00:02:11.036 HYPERVISOR: exec_cmd: vm set_config R3 configs/i5_startup-config.cfg 
+Jan 28 00:02:11.037 HYPERVISOR: exec_cmd: vm start R3 
+Jan 28 00:02:59.580 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 28 00:02:59.580 HYPERVISOR: exec_cmd: vm stop R3 
+Jan 28 00:02:59.688 VM: VM R3 shutdown.
+Jan 28 00:02:59.689 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 28 01:57:00.122 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Jan 28 01:57:00.123 HYPERVISOR: exec_cmd: vm set_ghost_file R3 /home/sobral/Desktop/2ANO/Projetos/RS/RS_Projeto/Projeto/project-files/dynamips/c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Jan 28 01:57:00.123 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 28 01:57:00.124 HYPERVISOR: exec_cmd: vm set_config R3 configs/i5_startup-config.cfg 
+Jan 28 01:57:00.124 HYPERVISOR: exec_cmd: vm start R3 
+Jan 28 01:58:08.167 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 28 01:58:08.167 HYPERVISOR: exec_cmd: vm stop R3 
+Jan 28 01:58:08.214 VM: VM R3 shutdown.
+Jan 28 01:58:08.215 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 28 01:59:32.153 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Jan 28 01:59:32.153 HYPERVISOR: exec_cmd: vm set_ghost_file R3 /home/sobral/Desktop/2ANO/Projetos/RS/RS_Projeto/Projeto/project-files/dynamips/c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Jan 28 01:59:32.154 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 28 01:59:32.154 HYPERVISOR: exec_cmd: vm set_config R3 configs/i5_startup-config.cfg 
+Jan 28 01:59:32.154 HYPERVISOR: exec_cmd: vm start R3 
+Jan 28 02:04:12.614 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 28 02:04:12.615 HYPERVISOR: exec_cmd: vm stop R3 
+Jan 28 02:04:12.726 VM: VM R3 shutdown.
+Jan 28 02:04:12.727 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 28 02:12:29.800 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Jan 28 02:12:29.801 HYPERVISOR: exec_cmd: vm set_ghost_file R3 /home/sobral/Desktop/2ANO/Projetos/RS/RS_Projeto/Projeto/project-files/dynamips/c3725-advipservicesk9-mz.124-21.image-128.ghost 
+Jan 28 02:12:29.801 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 28 02:12:29.801 HYPERVISOR: exec_cmd: vm set_config R3 configs/i5_startup-config.cfg 
+Jan 28 02:12:29.802 HYPERVISOR: exec_cmd: vm start R3 
+Jan 28 03:16:56.172 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 28 03:16:56.175 HYPERVISOR: exec_cmd: vm stop R3 
+Jan 28 03:16:56.270 VM: VM R3 shutdown.
+Jan 28 03:16:56.271 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 28 03:20:21.144 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 28 03:20:21.145 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 28 03:20:21.536 HYPERVISOR: exec_cmd: vm get_status R3 
+Jan 28 03:20:21.539 HYPERVISOR: exec_cmd: vm extract_config R3 
+Jan 28 03:20:21.548 HYPERVISOR: exec_cmd: vm delete R3 
+Jan 28 03:20:21.548 VM: VM R3 destroyed.
+Jan 28 03:20:21.552 HYPERVISOR: exec_cmd: hypervisor stop 
+Jan 28 03:20:22.030 HYPERVISOR: Stopped.
+Jan 28 03:20:22.030 GENERAL: reset done.
