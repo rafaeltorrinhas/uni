@@ -1,7 +1,4 @@
-package aula1.java;
-
-public class aula1 {
-
+public class abc {
   public static void main(String[] args) { // void -> tipo de retorno (não retorna nada);(String[] args) -> argumento
 
     String phrase = "dhaehskkajeidhsnaw";
@@ -19,6 +16,6 @@ public class aula1 {
     System.out.println(phrase.charAt(3));
     System.out.println(number);
 
-  };
+  }
 
-};
+}
