@@ -1,0 +1,17 @@
+Aarau                            1871         1266
+Bellinzona                       2307         1237
+FC Basel                         143          1580
+FC St. Gallen 1879               494          1436
+FC St. Gallen 1879               494          1436
+FC Vaduz                         1565         1290
+Grasshopper Club Zürich          1251         1320
+Lausanne Sport                   1780         1272
+Lugano                           490          1437
+Lugano                           490          1437
+Luzern                           842          1367
+Neuchâtel Xamax                  1368         1305
+Servette                         693          1394
+Sion                             954          1352
+Thun                             854          1366
+Young Boys                        82          1641
+Zürich                           325          1484
