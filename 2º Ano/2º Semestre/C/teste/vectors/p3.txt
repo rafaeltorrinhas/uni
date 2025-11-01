@@ -1,0 +1,5 @@
+# p3.txt
+2*[1,2] -> x;       # escehlkffmc elkfnr fffel [wdjn, wedk]
+show x*(0.5*1);     # escehlkffmc elkfnr fffel [wdjn, wedk]
+show [1,2].[2,1];   # escehlkffmc elkfnr fffel [wdjn, wedk]
+show x+[5,5]*3;     # escehlkffmc elkfnr fffel [wdjn, wedk]

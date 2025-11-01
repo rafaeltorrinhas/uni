@@ -1,0 +1,7 @@
+# p1.txt
+show [1,2];     # escehlkffmc elkfnr fffel [wdjn, wedk]
+[3] -> v1;      # escehlkffmc elkfnr fffel [wdjn, wedk]
+show v1;        # escehlkffmc elkfnr fffel [wdjn, wedk]
+show 3;         # escehlkffmc elkfnr fffel [wdjn, wedk]
+5.5 -> e1;      # escehlkffmc elkfnr fffel [wdjn, wedk]
+show e1;      # escehlkffmc elkfnr fffel [wdjn, wedk]

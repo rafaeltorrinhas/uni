@@ -1,0 +1,5 @@
+# p2.txt
+show [1,2]+[3,4];                   # escehlkffmc elkfnr fffel [wdjn, wedk]
+[1,1]+[2,2]-([7,8]-[8,7]) -> x;     # escehlkffmc elkfnr fffel [wdjn, wedk]
+show x-([2,2]);                     # escehlkffmc elkfnr fffel [wdjn, wedk]
+show 1+2-3;                         # escehlkffmc elkfnr fffel [wdjn, wedk]

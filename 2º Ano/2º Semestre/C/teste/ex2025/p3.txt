@@ -1,0 +1,3 @@
+print read;
+soma := (read + read);
+print soma;
